@@ -1,946 +1,545 @@
 <!DOCTYPE html>
-<html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Cadete Travel & Tours | Reservas & Transfers</title>
+<html lang="pt"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Cadete Travel & Tours — Reservas de hotéis, transfers, tours e serviços para viagens em Moçambique.">
+<title>Cadete Travel & Tours | Reservas & Transfers</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<meta name="description" content="Cadete Travel & Tours — Reservas de hotéis, transfers, tours e serviços para viagens em Moçambique.">
 
-    html {
-      scroll-behavior: smooth;
-    }
+<style> * { box-sizing: border-box; margin: 0; padding: 0; } html { scroll-behavior: smooth; } body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #222; background: #fff; } a { text-decoration: none; color: inherit; } .container { width: 90%; max-width: 1200px; margin: auto; } /* HEADER */ header { background: #ffffff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; } .header-content { min-height: 75px; display: flex; align-items: center; justify-content: space-between; gap: 20px; } .logo { font-size: 22px; font-weight: bold; color: #c62828; } .logo span { color: #1b5e20; } nav { display: flex; gap: 22px; flex-wrap: wrap; } nav a { font-weight: bold; font-size: 15px; } nav a:hover { color: #c62828; } /* HERO */ .hero { background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat; min-height: 520px; display: flex; align-items: center; text-align: center; color: #fff; } .hero-content { width: 100%; padding: 50px 20px; } .hero h1 { font-size: 46px; margin-bottom: 15px; } .hero p { font-size: 21px; max-width: 750px; margin: 0 auto 30px; } .buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; } .btn { display: inline-block; padding: 13px 24px; border-radius: 6px; font-weight: bold; transition: 0.3s; cursor: pointer; } .btn-primary { background: #c62828; color: #fff; } .btn-primary:hover { background: #a91f1f; } .btn-secondary { background: #fff; color: #222; } .btn-secondary:hover { background: #eee; } /* SECTIONS */ section { padding: 70px 0; } .section-title { text-align: center; margin-bottom: 40px; } .section-title h2 { font-size: 32px; margin-bottom: 10px; } .section-title p { color: #666; } /* SERVICES */ .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; } .card { border: 1px solid #eee; border-radius: 10px; padding: 28px 20px; text-align: center; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,.06); display: flex; flex-direction: column; align-items: center; } .card-icon { font-size: 40px; margin-bottom: 15px; } .card h3 { margin-bottom: 10px; } .card p { color: #666; font-size: 15px; margin-bottom: 20px; } .service-button { margin-top: auto; font-size: 14px; padding: 10px 18px; } /* ABOUT */ .about { background: #f7f7f7; } .about-content { max-width: 900px; margin: auto; text-align: center; } .about-content p { margin-bottom: 15px; color: #555; } /* DESTINATIONS */ .destinations { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; } .destination { min-height: 210px; border-radius: 10px; overflow: hidden; position: relative; background-size: cover; background-position: center; display: flex; align-items: flex-end; } .destination-content { width: 100%; padding: 20px; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.8)); } .destination h3 { font-size: 22px; } .beira { background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"); } .vilanculos { background-image: url("https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80"); } .maputo { background-image: url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80"); } .mozambique { background-image: url("https://images.unsplash.com/photo-1489493585363-d69421e0edd3?auto=format&fit=crop&w=900&q=80"); } /* TRANSFERS */ .transfer-list { max-width: 850px; margin: auto; } .transfer-item { padding: 20px; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; gap: 20px; } .transfer-item strong { display: block; margin-bottom: 4px; } .transfer-description { color: #555; } .transfer-button { white-space: nowrap; } /* CONTACT */ .contact { background: #f7f7f7; } .contact-content { text-align: center; max-width: 800px; margin: auto; } .contact-info { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px; } .contact-box { background: #fff; padding: 25px; border-radius: 8px; border: 1px solid #eee; } .contact-box h3 { margin-bottom: 8px; } .contact-box a { color: #1b5e20; font-weight: bold; } .contact-box a:hover { color: #c62828; } /* FOOTER */ footer { background: #1f1f1f; color: #fff; padding: 50px 0 20px; } .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 35px; } footer h3 { margin-bottom: 15px; } footer p, footer li { color: #ccc; font-size: 14px; } footer ul { list-style: none; } footer li { margin-bottom: 8px; } .copyright { border-top: 1px solid #444; padding-top: 20px; text-align: center; color: #aaa; font-size: 13px; } /* WHATSAPP */ .whatsapp-float { position: fixed; right: 22px; bottom: 22px; width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 29px; box-shadow: 0 4px 15px rgba(0,0,0,.25); z-index: 2000; } .whatsapp-float:hover { transform: scale(1.08); } /* MOBILE */ @media (max-width: 850px) { .header-content { flex-direction: column; padding: 15px 0; } nav { justify-content: center; } .hero h1 { font-size: 34px; } .hero p { font-size: 18px; } .cards, .destinations { grid-template-columns: repeat(2, 1fr); } .contact-info, .footer-grid { grid-template-columns: 1fr; } } @media (max-width: 550px) { .cards, .destinations { grid-template-columns: 1fr; } .transfer-item { flex-direction: column; align-items: flex-start; } .transfer-button { width: 100%; text-align: center; } .hero { min-height: 480px; } section { padding: 50px 0; } } </style>
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background: #fff;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* HEADER */
-
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .header-content {
-      min-height: 75px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: #c62828;
-    }
-
-    .logo span {
-      color: #1b5e20;
-    }
-
-    nav {
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      font-weight: bold;
-      font-size: 15px;
-    }
-
-    nav a:hover {
-      color: #c62828;
-    }
-
-    /* HERO */
-
-    .hero {
-      background:
-        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80")
-        center/cover no-repeat;
-
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-    }
-
-    .hero-content {
-      width: 100%;
-      padding: 50px 20px;
-    }
-
-    .hero h1 {
-      font-size: 46px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 21px;
-      max-width: 750px;
-      margin: 0 auto 30px;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 24px;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn-primary {
-      background: #c62828;
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: #a91f1f;
-    }
-
-    .btn-secondary {
-      background: #fff;
-      color: #222;
-    }
-
-    .btn-secondary:hover {
-      background: #eee;
-    }
-
-    /* SECTIONS */
-
-    section {
-      padding: 70px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .section-title h2 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: #666;
-    }
-
-    /* SERVICES */
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 28px 20px;
-      text-align: center;
-      background: #fff;
-      box-shadow: 0 4px 15px rgba(0,0,0,.06);
-    }
-
-    .card-icon {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #666;
-      font-size: 15px;
-    }
-
-    /* ABOUT */
-
-    .about {
-      background: #f7f7f7;
-    }
-
-    .about-content {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .about-content p {
-      margin-bottom: 15px;
-      color: #555;
-    }
-
-    /* DESTINATIONS */
-
-    .destinations {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .destination {
-      min-height: 210px;
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: flex-end;
-    }
-
-    .destination-content {
-      width: 100%;
-      padding: 20px;
-      color: #fff;
-      background: linear-gradient(transparent, rgba(0,0,0,.8));
-    }
-
-    .destination h3 {
-      font-size: 22px;
-    }
-
-    .beira {
-      background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80");
-    }
-
-    .vilanculos {
-      background-image: url("https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80");
-    }
-
-    .maputo {
-      background-image: url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80");
-    }
-
-    .mozambique {
-      background-image: url("https://images.unsplash.com/photo-1489493585363-d69421e0edd3?auto=format&fit=crop&w=900&q=80");
-    }
-
-    /* TRANSFERS */
-
-    .transfer-list {
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .transfer-item {
-      padding: 20px;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .transfer-item strong {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .transfer-description {
-      color: #555;
-    }
-
-    .transfer-button {
-      white-space: nowrap;
-    }
-
-    /* CONTACT */
-
-    .contact {
-      background: #f7f7f7;
-    }
-
-    .contact-content {
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .contact-info {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .contact-box {
-      background: #fff;
-      padding: 25px;
-      border-radius: 8px;
-      border: 1px solid #eee;
-    }
-
-    .contact-box h3 {
-      margin-bottom: 8px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #1f1f1f;
-      color: #fff;
-      padding: 50px 0 20px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 35px;
-    }
-
-    footer h3 {
-      margin-bottom: 15px;
-    }
-
-    footer p,
-    footer li {
-      color: #ccc;
-      font-size: 14px;
-    }
-
-    footer ul {
-      list-style: none;
-    }
-
-    footer li {
-      margin-bottom: 8px;
-    }
-
-    .copyright {
-      border-top: 1px solid #444;
-      padding-top: 20px;
-      text-align: center;
-      color: #aaa;
-      font-size: 13px;
-    }
-
-    /* WHATSAPP */
-
-    .whatsapp-float {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: #25d366;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 29px;
-      box-shadow: 0 4px 15px rgba(0,0,0,.25);
-      z-index: 2000;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.08);
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 850px) {
-
-      .header-content {
-        flex-direction: column;
-        padding: 15px 0;
-      }
-
-      nav {
-        justify-content: center;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      .cards,
-      .destinations {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .contact-info,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 550px) {
-
-      .cards,
-      .destinations {
-        grid-template-columns: 1fr;
-      }
-
-      .transfer-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .transfer-button {
-        width: 100%;
-        text-align: center;
-      }
-
-      .hero {
-        min-height: 480px;
-      }
-
-      section {
-        padding: 50px 0;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+<!-- HEADER -->
 
-  <header>
-    <div class="container header-content">
+<header> <div class="container header-content">
 
-      <a href="#inicio" class="logo">
-        Cadete <span>Travel & Tours</span>
-      </a>
-
-      <nav>
-        <a href="#inicio">Início</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#destinos">Destinos</a>
-        <a href="#transfers">Transfers</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-
-    </div>
-  </header>
-
-
-  <!-- HERO -->
-
-  <section class="hero" id="inicio">
-
-    <div class="hero-content">
-
-      <h1>Cadete Travel & Tours</h1>
-
-      <p>
-        Reservas, Transfers e experiências de viagem
-        com atendimento profissional em Moçambique.
-      </p>
-
-      <div class="buttons">
-
-        <a
-          class="btn btn-primary"
-          href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20fazer%20uma%20reserva."
-          target="_blank"
-          rel="noopener">
-          💬 Reservar pelo WhatsApp
-        </a>
-
-        <a class="btn btn-secondary" href="#servicos">
-          Conhecer os serviços
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SERVIÇOS -->
-
-  <section id="servicos">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>Os nossos serviços</h2>
-
-        <p>
-          Soluções práticas para tornar a sua viagem mais simples.
-        </p>
-
-      </div>
-
-      <div class="cards">
-
-        <div class="card">
-
-          <div class="card-icon">🏨</div>
-
-          <h3>Reservas de Hotéis</h3>
-
-          <p>
-            Ajudamos a encontrar e reservar alojamentos
-            de acordo com as suas necessidades.
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="card-icon">🚐</div>
-
-          <h3>Transfers</h3>
-
-          <p>
-            Transfers para aeroportos, hotéis,
-            empresas e outros destinos.
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="card-icon">🌍</div>
-
-          <h3>Tours</h3>
-
-          <p>
-            Organizamos experiências e passeios
-            para conhecer diferentes destinos.
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="card-icon">🎉</div>
-
-          <h3>Eventos</h3>
-
-          <p>
-            Ornamentação para casamentos,
-            reuniões e eventos especiais.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SOBRE -->
-
-  <section class="about">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>Sobre a Cadete Travel & Tours</h2>
-
-      </div>
-
-      <div class="about-content">
-
-        <p>
-          A Cadete Travel & Tours é uma empresa orientada para
-          serviços de turismo, reservas, transfers e apoio a viajantes.
-        </p>
-
-        <p>
-          O nosso objetivo é proporcionar aos clientes
-          um atendimento simples, rápido e profissional.
-        </p>
-
-        <p>
-          Trabalhamos para facilitar a organização das suas viagens,
-          desde a reserva do hotel até ao transporte e experiências
-          no destino.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- DESTINOS -->
-
-  <section id="destinos">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>Destinos</h2>
-
-        <p>
-          Descubra alguns dos destinos que podemos ajudar a organizar.
-        </p>
-
-      </div>
-
-      <div class="destinations">
-
-        <div class="destination beira">
-
-          <div class="destination-content">
-            <h3>Beira</h3>
-            <p>Porta de entrada para Sofala.</p>
-          </div>
-
-        </div>
-
-
-        <div class="destination vilanculos">
-
-          <div class="destination-content">
-            <h3>Vilanculos</h3>
-            <p>Praias e experiências costeiras.</p>
-          </div>
-
-        </div>
-
-
-        <div class="destination maputo">
-
-          <div class="destination-content">
-            <h3>Maputo</h3>
-            <p>Cultura, negócios e turismo.</p>
-          </div>
-
-        </div>
-
-
-        <div class="destination mozambique">
-
-          <div class="destination-content">
-            <h3>Moçambique</h3>
-            <p>Planeie a sua próxima viagem.</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- TRANSFERS -->
-
-  <section id="transfers">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>Transfers</h2>
-
-        <p>
-          Solicite um orçamento para o seu próximo transfer.
-        </p>
-
-      </div>
-
-      <div class="transfer-list">
-
-        <!-- AEROPORTO → HOTEL -->
-
-        <div class="transfer-item">
-
-          <div>
-            <strong>✈️ Aeroporto → Hotel</strong>
-
-            <div class="transfer-description">
-              Transfer privado com motorista.
-            </div>
-          </div>
-
-          <a
-            class="btn btn-primary transfer-button"
-            href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20um%20transfer%20do%20Aeroporto%20para%20o%20Hotel."
-            target="_blank"
-            rel="noopener">
-            💬 Solicitar preço
-          </a>
-
-        </div>
-
-
-        <!-- HOTEL → AEROPORTO -->
-
-        <div class="transfer-item">
-
-          <div>
-            <strong>🏨 Hotel → Aeroporto</strong>
-
-            <div class="transfer-description">
-              Transporte programado para o seu voo.
-            </div>
-          </div>
-
-          <a
-            class="btn btn-primary transfer-button"
-            href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20um%20transfer%20do%20Hotel%20para%20o%20Aeroporto."
-            target="_blank"
-            rel="noopener">
-            💬 Solicitar preço
-          </a>
-
-        </div>
-
-
-        <!-- TRANSFER EMPRESARIAL -->
-
-        <div class="transfer-item">
-
-          <div>
-            <strong>💼 Transfer Empresarial</strong>
-
-            <div class="transfer-description">
-              Transporte para reuniões e compromissos.
-            </div>
-          </div>
-
-          <a
-            class="btn btn-primary transfer-button"
-            href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20um%20Transfer%20Empresarial."
-            target="_blank"
-            rel="noopener">
-            💬 Solicitar preço
-          </a>
-
-        </div>
-
-
-        <!-- TRANSFER PERSONALIZADO -->
-
-        <div class="transfer-item">
-
-          <div>
-            <strong>🚐 Transfer Personalizado</strong>
-
-            <div class="transfer-description">
-              Serviço adaptado ao seu itinerário.
-            </div>
-          </div>
-
-          <a
-            class="btn btn-primary transfer-button"
-            href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20um%20Transfer%20Personalizado."
-            target="_blank"
-            rel="noopener">
-            💬 Solicitar preço
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACTO -->
-
-  <section class="contact" id="contacto">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>Entre em contacto</h2>
-
-        <p>
-          Estamos disponíveis para ajudar a organizar a sua viagem.
-        </p>
-
-      </div>
-
-      <div class="contact-content">
-
-        <div class="contact-info">
-
-          <div class="contact-box">
-
-            <h3>📞 Telefone</h3>
-
-            <p>
-              +258 845 058 349<br>
-              +258 875 058 349
-            </p>
-
-          </div>
-
-
-          <div class="contact-box">
-
-            <h3>💬 WhatsApp</h3>
-
-            <p>
-              +258 823 905 132
-            </p>
-
-          </div>
-
-
-          <div class="contact-box">
-
-            <h3>✉️ Email</h3>
-
-            <p>
-              cadetetours@gmail.com
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div>
-
-          <h3>Cadete Travel & Tours</h3>
-
-          <p>
-            Reservas & Transfers.
-            Facilitamos as suas viagens em Moçambique.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <h3>Serviços</h3>
-
-          <ul>
-
-            <li>Reservas de Hotéis</li>
-            <li>Transfers</li>
-            <li>Tours</li>
-            <li>Ornamentação de Eventos</li>
-
-          </ul>
-
-        </div>
-
-
-        <div>
-
-          <h3>Horário</h3>
-
-          <p>
-            Segunda – Sexta<br>
-            08:00 – 17:00
-          </p>
-
-          <p>
-            Sábado<br>
-            08:00 – 13:00
-          </p>
-
-          <p>
-            Domingo: Encerrado
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="copyright">
-
-        © 2026 Cadete Travel & Tours.
-        Todos os direitos reservados.
-
-      </div>
-
-    </div>
-
-  </footer>
-
-
-  <!-- WHATSAPP FLUTUANTE -->
-
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20obter%20informações."
-    target="_blank"
-    rel="noopener"
-    aria-label="Falar com a Cadete Travel & Tours pelo WhatsApp">
-
-    💬
-
+  <a href="#inicio" class="logo">
+    Cadete <span>Travel & Tours</span>
   </a>
 
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#destinos">Destinos</a>
+    <a href="#transfers">Transfers</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-</body>
-</html>
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+  <h1>Cadete Travel & Tours</h1>
+
+  <p>
+    Reservas, Transfers e experiências de viagem
+    com atendimento profissional em Moçambique.
+  </p>
+
+  <div class="buttons">
+
+    <a
+      class="btn btn-primary"
+      href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20fazer%20uma%20reserva."
+      target="_blank"
+      rel="noopener">
+      💬 Reservar pelo WhatsApp
+    </a>
+
+    <a class="btn btn-secondary" href="#servicos">
+      Conhecer os serviços
+    </a>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- SERVIÇOS -->
+
+<section id="servicos">
+
+<div class="container">
+
+  <div class="section-title">
+
+    <h2>Os nossos serviços</h2>
+
+    <p>
+      Soluções práticas para tornar a sua viagem mais simples.
+    </p>
+
+  </div>
+
+  <div class="cards">
+
+    <!-- RESERVAS DE HOTÉIS -->
+
+    <div class="card">
+
+      <div class="card-icon">🏨</div>
+
+      <h3>Reservas de Hotéis</h3>
+
+      <p>
+        Ajudamos a encontrar e reservar alojamentos
+        de acordo com as suas necessidades.
+      </p>
+
+      <a
+        class="btn btn-primary service-button"
+        href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20solicitar%20uma%20reserva%20de%20hotel."
+        target="_blank"
+        rel="noopener">
+        💬 Solicitar reserva
+      </a>
+
+    </div>
+
+
+    <!-- TRANSFERS -->
+
+    <div class="card">
+
+      <div class="card-icon">🚐</div>
+
+      <h3>Transfers</h3>
+
+      <p>
+        Transfers para aeroportos, hotéis,
+        empresas e outros destinos.
+      </p>
+
+      <a
+        class="btn btn-primary service-button"
+        href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20um%20transfer."
+        target="_blank"
+        rel="noopener">
+        💬 Solicitar orçamento
+      </a>
+
+    </div>
+
+
+    <!-- TOURS -->
+
+    <div class="card">
+
+      <div class="card-icon">🌍</div>
+
+      <h3>Tours</h3>
+
+      <p>
+        Organizamos experiências e passeios
+        para conhecer diferentes destinos.
+      </p>
+
+      <a
+        class="btn btn-primary service-button"
+        href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20saber%20mais%20sobre%20os%20tours%20disponíveis."
+        target="_blank"
+        rel="noopener">
+        💬 Planear um tour
+      </a>
+
+    </div>
+
+
+    <!-- EVENTOS -->
+
+    <div class="card">
+
+      <div class="card-icon">🎉</div>
+
+      <h3>Eventos</h3>
+
+      <p>
+        Ornamentação para casamentos,
+        reuniões e eventos especiais.
+      </p>
+
+      <a
+        class="btn btn-primary service-button"
+        href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20solicitar%20um%20orçamento%20para ornamentação de um evento."
+        target="_blank"
+        rel="noopener">
+        💬 Solicitar orçamento
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- SOBRE -->
+
+<section class="about">
+
+<div class="container">
+
+  <div class="section-title">
+
+    <h2>Sobre a Cadete Travel & Tours</h2>
+
+  </div>
+
+  <div class="about-content">
+
+    <p>
+      A Cadete Travel & Tours é uma empresa orientada para
+      serviços de turismo, reservas, transfers e apoio a viajantes.
+    </p>
+
+    <p>
+      O nosso objetivo é proporcionar aos clientes
+      um atendimento simples, rápido e profissional.
+    </p>
+
+    <p>
+      Trabalhamos para facilitar a organização das suas viagens,
+      desde a reserva do hotel até ao transporte e experiências
+      no destino.
+    </p>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- DESTINOS -->
+
+<section id="destinos">
+
+<div class="container">
+
+  <div class="section-title">
+
+    <h2>Destinos</h2>
+
+    <p>
+      Descubra alguns dos destinos que podemos ajudar a organizar.
+    </p>
+
+  </div>
+
+  <div class="destinations">
+
+    <div class="destination beira">
+
+      <div class="destination-content">
+        <h3>Beira</h3>
+        <p>Porta de entrada para Sofala.</p>
+      </div>
+
+    </div>
+
+
+    <div class="destination vilanculos">
+
+      <div class="destination-content">
+        <h3>Vilanculos</h3>
+        <p>Praias e experiências costeiras.</p>
+      </div>
+
+    </div>
+
+
+    <div class="destination maputo">
+
+      <div class="destination-content">
+        <h3>Maputo</h3>
+        <p>Cultura, negócios e turismo.</p>
+      </div>
+
+    </div>
+
+
+    <div class="destination mozambique">
+
+      <div class="destination-content">
+        <h3>Moçambique</h3>
+        <p>Planeie a sua próxima viagem.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- TRANSFERS -->
+
+<section id="transfers">
+
+<div class="container">
+
+  <div class="section-title">
+
+    <h2>Transfers</h2>
+
+    <p>
+      Solicite um orçamento para o seu próximo transfer.
+    </p>
+
+  </div>
+
+  <div class="transfer-list">
+
+    <!-- AEROPORTO → HOTEL -->
+
+    <div class="transfer-item">
+
+      <div>
+        <strong>✈️ Aeroporto → Hotel</strong>
+
+        <div class="transfer-description">
+          Transfer privado com motorista.
+        </div>
+      </div>
+
+      <a
+        class="btn btn-primary transfer-button"
+        href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20um%20transfer%20do%20Aeroporto%20para%20o%20Hotel."
+        target="_blank"
+        rel="noopener">
+        💬 Solicitar preço
+      </a>
+
+    </div>
+
+
+    <!-- HOTEL → AEROPORTO -->
+
+    <div class="transfer-item">
+
+      <div>
+        <strong>🏨 Hotel → Aeroporto</strong>
+
+        <div class="transfer-description">
+          Transporte programado para o seu voo.
+        </div>
+      </div>
+
+      <a
+        class="btn btn-primary transfer-button"
+        href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20um%20transfer%20do%20Hotel%20para%20o%20Aeroporto."
+        target="_blank"
+        rel="noopener">
+        💬 Solicitar preço
+      </a>
+
+    </div>
+
+
+    <!-- TRANSFER EMPRESARIAL -->
+
+    <div class="transfer-item">
+
+      <div>
+        <strong>💼 Transfer Empresarial</strong>
+
+        <div class="transfer-description">
+          Transporte para reuniões e compromissos.
+        </div>
+      </div>
+
+      <a
+        class="btn btn-primary transfer-button"
+        href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20um%20Transfer%20Empresarial."
+        target="_blank"
+        rel="noopener">
+        💬 Solicitar preço
+      </a>
+
+    </div>
+
+
+    <!-- TRANSFER PERSONALIZADO -->
+
+    <div class="transfer-item">
+
+      <div>
+        <strong>🚐 Transfer Personalizado</strong>
+
+        <div class="transfer-description">
+          Serviço adaptado ao seu itinerário.
+        </div>
+      </div>
+
+      <a
+        class="btn btn-primary transfer-button"
+        href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20um%20Transfer%20Personalizado."
+        target="_blank"
+        rel="noopener">
+        💬 Solicitar preço
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section class="contact" id="contacto">
+
+<div class="container">
+
+  <div class="section-title">
+
+    <h2>Entre em contacto</h2>
+
+    <p>
+      Estamos disponíveis para ajudar a organizar a sua viagem.
+    </p>
+
+  </div>
+
+  <div class="contact-content">
+
+    <div class="contact-info">
+
+      <div class="contact-box">
+
+        <h3>📞 Telefone</h3>
+
+        <p>
+          +258 845 058 349<br>
+          +258 875 058 349
+        </p>
+
+      </div>
+
+
+      <div class="contact-box">
+
+        <h3>💬 WhatsApp</h3>
+
+        <p>
+          <a
+            href="https://wa.me/258823905132"
+            target="_blank"
+            rel="noopener">
+            +258 823 905 132
+          </a>
+        </p>
+
+      </div>
+
+
+      <div class="contact-box">
+
+        <h3>✉️ Email</h3>
+
+        <p>
+          <a href="mailto:cadetetours@gmail.com">
+            cadetetours@gmail.com
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+  <div class="footer-grid">
+
+    <div>
+
+      <h3>Cadete Travel & Tours</h3>
+
+      <p>
+        Reservas & Transfers.
+        Facilitamos as suas viagens em Moçambique.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h3>Serviços</h3>
+
+      <ul>
+
+        <li>Reservas de Hotéis</li>
+        <li>Transfers</li>
+        <li>Tours</li>
+        <li>Ornamentação de Eventos</li>
+
+      </ul>
+
+    </div>
+
+
+    <div>
+
+      <h3>Horário</h3>
+
+      <p>
+        Segunda – Sexta<br>
+        08:00 – 17:00
+      </p>
+
+      <p>
+        Sábado<br>
+        08:00 – 13:00
+      </p>
+
+      <p>
+        Domingo: Encerrado
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="copyright">
+
+    © 2026 Cadete Travel & Tours.
+    Todos os direitos reservados.
+
+  </div>
+
+</div>
+
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+
+<a class="whatsapp-float" href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20gostaria%20de%20obter%20informações." target="_blank" rel="noopener" aria-label="Falar com a Cadete Travel & Tours pelo WhatsApp">
+
+💬
+
+</a>
