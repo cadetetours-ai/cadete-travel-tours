@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cadete Travel & Tours — reservas de hotéis, transfers aeroportuários, tours e pacotes em Moçambique e destinos internacionais.">
+  <title>Cadete Travel & Tours | Reservas & Transfers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">
+    <div>📍 Beira, Sofala – Moçambique</div>
+    <div class="top-contacts">
+      <span>☎ +258 845 058 349</span>
+      <span>☎ +258 875 058 349</span>
+      <span>💬 +258 823 905 132</span>
+      <span>✉ cadetetours@gmail.com</span>
+      <button id="langBtn" class="lang-btn">EN</button>
+    </div>
+  </div>
+
+  <header class="header">
+    <a class="brand" href="#inicio" aria-label="Cadete Travel & Tours">
+      <div class="logo-mark">✈</div>
+      <div>
+        <strong>CADETE</strong>
+        <small>TRAVEL & TOURS</small>
+      </div>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+    <nav id="mainNav">
+      <a href="#inicio" class="active" data-pt="INÍCIO" data-en="HOME">INÍCIO</a>
+      <a href="#servicos" data-pt="HOTELARIA" data-en="HOTELS">HOTELARIA</a>
+      <a href="#transfer" data-pt="TRANSFERS" data-en="TRANSFERS">TRANSFERS</a>
+      <a href="#tours" data-pt="TOURS & PACOTES" data-en="TOURS & PACKAGES">TOURS & PACOTES</a>
+      <a href="#corporate" data-pt="CORPORATE" data-en="CORPORATE">CORPORATE</a>
+      <a href="#sobre" data-pt="SOBRE NÓS" data-en="ABOUT US">SOBRE NÓS</a>
+      <a href="#contactos" data-pt="CONTACTOS" data-en="CONTACT">CONTACTOS</a>
+    </nav>
+    <a class="btn btn-primary header-btn" href="#reserva" data-pt="SOLICITAR RESERVA" data-en="BOOK NOW">SOLICITAR RESERVA</a>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">CADETE TRAVEL & TOURS</p>
+          <h1 data-pt="SUA VIAGEM,<br>NOSSA PRIORIDADE!" data-en="YOUR JOURNEY,<br>OUR PRIORITY!">SUA VIAGEM,<br>NOSSA PRIORIDADE!</h1>
+          <p class="hero-sub" data-pt="Hotelaria, Transfers e Pacotes Turísticos com segurança, conforto e confiança."
+             data-en="Hotel bookings, transfers and tour packages with safety, comfort and confidence.">
+            Hotelaria, Transfers e Pacotes Turísticos com segurança, conforto e confiança.
+          </p>
+          <div class="hero-actions">
+            <a class="btn whatsapp" href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours,%20quero%20fazer%20uma%20reserva." target="_blank">💬 FALAR NO WHATSAPP</a>
+            <a class="btn btn-dark" href="#reserva">▣ SOLICITAR RESERVA</a>
+          </div>
+        </div>
+        <div class="service-cards">
+          <a href="#reserva" class="service-card">
+            <div class="service-icon">🏨</div><div><b>HOTELARIA</b><small>Hotel Bookings</small></div>
+          </a>
+          <a href="#reserva" class="service-card">
+            <div class="service-icon">🚐</div><div><b>TRANSFERS</b><small>Airport & City Transfers</small></div>
+          </a>
+          <a href="#tours" class="service-card">
+            <div class="service-icon">🌴</div><div><b>TOURS & PACOTES</b><small>Tours & Packages</small></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="reserva" class="booking-section">
+      <div class="booking-box">
+        <div class="section-heading light">
+          <h2 data-pt="FAÇA A SUA RESERVA AGORA" data-en="MAKE YOUR RESERVATION NOW">FAÇA A SUA RESERVA AGORA</h2>
+          <span>BOOKING & TRANSFER REQUEST</span>
+        </div>
+
+        <div class="booking-tabs">
+          <button class="tab active" data-type="hotel">🏨 HOTEL</button>
+          <button class="tab" data-type="transfer">🚐 TRANSFER</button>
+          <button class="tab" data-type="combo">🏨 + 🚐 HOTEL + TRANSFER</button>
+          <button class="tab" data-type="tour">🌴 TOUR / PACOTE</button>
+        </div>
+
+        <form id="bookingForm">
+          <input type="hidden" id="serviceType" value="hotel">
+          <div class="form-grid">
+            <label>CIDADE / DESTINO
+              <input id="destination" required placeholder="Ex: Beira">
+            </label>
+            <label>DATA DE CHEGADA
+              <input id="arrival" type="date" required>
+            </label>
+            <label>DATA DE SAÍDA
+              <input id="departure" type="date">
+            </label>
+            <label>Nº DE PESSOAS
+              <select id="people">
+                <option>1 Pessoa</option><option>2 Pessoas</option><option>3 Pessoas</option>
+                <option>4 Pessoas</option><option>5 Pessoas</option><option>6+ Pessoas</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-grid extra-fields">
+            <label>NOME COMPLETO
+              <input id="name" required placeholder="Seu nome">
+            </label>
+            <label>TELEFONE / WHATSAPP
+              <input id="phone" required placeholder="+258 ...">
+            </label>
+            <label>E-MAIL
+              <input id="email" type="email" placeholder="seuemail@email.com">
+            </label>
+            <label>OBSERVAÇÕES
+              <input id="notes" placeholder="Horário, voo, hotel, pedido especial...">
+            </label>
+          </div>
+
+          <button class="search-btn" type="submit">🔎 ENVIAR PEDIDO DE RESERVA</button>
+          <p class="form-note">O pedido será preparado automaticamente para envio pelo WhatsApp da Cadete Travel & Tours.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="servicos" class="section">
+      <div class="section-heading">
+        <h2>PORQUE ESCOLHER A CADETE</h2>
+        <span>WHY CHOOSE CADETE</span>
+      </div>
+      <div class="features">
+        <article><div class="feature-icon">🛡️</div><h3>SEGURANÇA E CONFIANÇA</h3><p>Parceiros selecionados e acompanhamento em cada etapa da viagem.</p></article>
+        <article><div class="feature-icon">🏅</div><h3>MELHORES PREÇOS</h3><p>Tarifas competitivas e condições especiais para clientes.</p></article>
+        <article><div class="feature-icon">◷</div><h3>PONTUALIDADE</h3><p>Transfers organizados para uma viagem tranquila e confortável.</p></article>
+        <article><div class="feature-icon">🎧</div><h3>ATENDIMENTO DEDICADO</h3><p>Suporte personalizado antes, durante e depois da viagem.</p></article>
+        <article><div class="feature-icon">🌐</div><h3>SERVIÇO GLOBAL</h3><p>Experiência local com padrões internacionais de qualidade.</p></article>
+      </div>
+    </section>
+
+    <section id="transfer" class="dark-section">
+      <div class="split">
+        <div>
+          <p class="eyebrow">TRANSFER SERVICES</p>
+          <h2>Transfers seguros, pontuais e confortáveis</h2>
+          <p>Reserve o seu transfer do aeroporto, hotel ou cidade. Informe o voo e horário e a nossa equipa prepara a solução adequada.</p>
+          <a href="#reserva" class="btn btn-primary">RESERVAR TRANSFER</a>
+        </div>
+        <div class="transfer-list">
+          <div>✈️ <b>Aeroporto → Hotel</b><span>Chegadas e partidas</span></div>
+          <div>🏨 <b>Hotel → Aeroporto</b><span>Transfer de saída</span></div>
+          <div>🚐 <b>Transfers privados</b><span>Viagens personalizadas</span></div>
+          <div>🏙️ <b>Transfers urbanos</b><span>Beira e outros destinos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tours" class="section">
+      <div class="section-heading">
+        <h2>DESTINOS POPULARES</h2>
+        <span>POPULAR DESTINATIONS</span>
+      </div>
+      <div class="destinations">
+        <article class="destination beira"><div><h3>BEIRA</h3><p>Hotéis · Transfers · Tours</p><a href="#reserva">EXPLORAR</a></div></article>
+        <article class="destination vilankulo"><div><h3>VILANKULO</h3><p>Hotéis · Transfers · Tours</p><a href="#reserva">EXPLORAR</a></div></article>
+        <article class="destination maputo"><div><h3>MAPUTO</h3><p>Hotéis · Transfers · Tours</p><a href="#reserva">EXPLORAR</a></div></article>
+        <article class="destination joburg"><div><h3>JOANESBURGO</h3><p>Transfers · Tours · Hotéis</p><a href="#reserva">EXPLORAR</a></div></article>
+        <article class="destination lisboa"><div><h3>LISBOA</h3><p>Hotéis · Transfers · Tours</p><a href="#reserva">EXPLORAR</a></div></article>
+      </div>
+    </section>
+
+    <section id="corporate" class="corporate">
+      <div>
+        <h2>SOLUÇÕES DE VIAGENS PARA EMPRESAS</h2>
+        <p>Alojamento, transfers e gestão de viagens corporativas.</p>
+      </div>
+      <a href="https://wa.me/258823905132?text=Olá,%20quero%20uma%20proposta%20de%20Corporate%20Travel." target="_blank" class="btn btn-primary">SOLICITAR PROPOSTA</a>
+    </section>
+
+    <section id="sobre" class="about section">
+      <div class="section-heading"><h2>CADETE TRAVEL & TOURS</h2><span>VIAGENS COM CONFIANÇA</span></div>
+      <div class="about-grid">
+        <div><h3>Quem somos</h3><p>Somos uma agência de viagens baseada na Beira, dedicada a reservas de hotéis, transfers, tours e soluções de viagem para particulares e empresas.</p></div>
+        <div><h3>O nosso compromisso</h3><p>Facilitar a sua viagem com atendimento rápido, comunicação clara, parceiros confiáveis e soluções adaptadas ao seu orçamento.</p></div>
+        <div><h3>Como funciona</h3><p>Envie o seu pedido → confirmamos disponibilidade e preço → recebe a proposta → confirma a reserva → recebe os detalhes da viagem.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contactos">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="logo-mark">✈</div>
+        <h2>CADETE</h2><small>TRAVEL & TOURS</small>
+        <p>A sua agência de viagens em Moçambique.</p>
+      </div>
+      <div><h4>LINKS RÁPIDOS</h4><a href="#inicio">Início</a><a href="#servicos">Hotelaria</a><a href="#transfer">Transfers</a><a href="#tours">Tours & Pacotes</a><a href="#corporate">Corporate</a></div>
+      <div><h4>SERVIÇOS</h4><a href="#reserva">Reservas de Hotéis</a><a href="#reserva">Transfers Aeroporto</a><a href="#reserva">Transfers Cidade</a><a href="#tours">Tours Nacionais</a><a href="#tours">Tours Internacionais</a></div>
+      <div><h4>CONTACTOS</h4><p>☎ +258 845 058 349</p><p>☎ +258 875 058 349</p><p>💬 +258 823 905 132</p><p>✉ cadetetours@gmail.com</p><p>📍 Beira, Sofala – Moçambique</p></div>
+      <div><h4>HORÁRIO</h4><p>Segunda – Sexta<br>08:00 – 18:00</p><p>Sábado<br>08:00 – 13:00</p><p>Domingo: Encerrado</p></div>
+    </div>
+    <div class="copyright">© 2026 Cadete Travel & Tours. Todos os direitos reservados.</div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/258823905132?text=Olá%20Cadete%20Travel%20%26%20Tours!" target="_blank" aria-label="WhatsApp">💬</a>
+  <script src="script.js"></script>
+</body>
+</html>
