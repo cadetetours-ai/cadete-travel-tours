@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Solicite reservas e orçamentos à Cadete Travel & Tours, Beira, Moçambique.">
+  <title>Formulário de Reserva | Cadete Travel & Tours</title>
+  <style>
+    :root{--navy:#102b50;--blue:#174a7e;--gold:#d9b65d;--ink:#172334;--muted:#64748b;--line:#dce4ee;--bg:#f3f6fa}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.5}
+    .hero{background:linear-gradient(135deg,#0b203c,var(--navy),#1d4c79);color:#fff;padding:28px 18px;text-align:center;border-bottom:4px solid var(--gold)}
+    .plane{font-size:36px;color:var(--gold);line-height:1.2}.brand{font-weight:800;letter-spacing:2px;font-size:clamp(23px,4vw,34px);margin:8px 0 0}.subbrand{color:#f0d68d;font-size:16px;margin:0}.slogan{margin:10px 0 0;font-size:14px}
+    main{max-width:760px;margin:26px auto;padding:0 14px 30px}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(18px,4vw,30px);box-shadow:0 8px 28px rgba(16,43,80,.08)}
+    h1{font-size:25px;margin:0 0 6px;color:var(--navy)}.intro{color:var(--muted);margin:0 0 24px;font-size:14px}fieldset{border:0;border-top:1px solid var(--line);padding:20px 0 0;margin:20px 0 0}legend{font-weight:700;color:var(--navy);padding:0 10px 0 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}label{font-weight:600;font-size:14px}
+    input,select,textarea{width:100%;border:1px solid #cbd5e1;border-radius:9px;padding:12px 13px;font:inherit;font-size:15px;background:#fff;color:var(--ink)}input:focus,select:focus,textarea:focus{outline:2px solid #a8c8e8;border-color:var(--blue)}textarea{min-height:100px;resize:vertical}.hint{font-size:12px;color:var(--muted);margin-top:-3px}
+    .btn{width:100%;border:0;border-radius:10px;padding:15px 18px;background:#16834a;color:white;font-size:16px;font-weight:700;cursor:pointer;margin-top:10px}.btn:hover{background:#116b3c}.notice{background:#f8f4e7;border:1px solid #ead9a4;color:#59491c;border-radius:9px;padding:12px 14px;font-size:13px;margin-top:16px}footer{text-align:center;color:var(--muted);font-size:13px;padding:0 10px 26px}footer a{color:var(--blue)}.required{color:#b42318}
+    @media(max-width:560px){.grid{grid-template-columns:1fr;gap:0}.hero{padding:25px 14px}.card{border-radius:12px}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="plane" aria-hidden="true">✈</div><div class="brand">CADETE</div><p class="subbrand">Travel &amp; Tours</p>
+    <p class="slogan">O seu destino, a nossa prioridade!</p><p style="margin:8px 0 0;font-size:13px">Beira, Sofala — Moçambique</p>
+  </header>
+  <main><section class="card">
+    <h1>Formulário de Reserva</h1><p class="intro">Preencha os dados para solicitar um orçamento ou uma reserva. Os campos assinalados com <span class="required">*</span> são obrigatórios.</p>
+    <form id="bookingForm">
+      <fieldset><legend>1. Dados do cliente</legend>
+        <div class="field"><label for="name">Nome completo <span class="required">*</span></label><input id="name" name="name" autocomplete="name" required placeholder="Introduza o seu nome completo"></div>
+        <div class="grid"><div class="field"><label for="phone">Telefone / WhatsApp <span class="required">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+258 ..."></div>
+        <div class="field"><label for="email">E-mail (opcional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="nome@exemplo.com"></div></div>
+      </fieldset>
+      <fieldset><legend>2. Detalhes do pedido</legend>
+        <div class="field"><label for="service">Serviço pretendido <span class="required">*</span></label><select id="service" name="service" required><option value="">— Seleccione um serviço —</option><option>Reserva de hotel / alojamento</option><option>Transfer (aeroporto, hotel ou outro local)</option><option>Tours e passeios turísticos</option><option>Aluguer de viatura</option><option>Organização e ornamentação de eventos</option><option>Apoio para vistos</option><option>Outro serviço</option></select></div>
+        <div class="field"><label for="destination">Destino ou local do serviço <span class="required">*</span></label><input id="destination" name="destination" required placeholder="Ex.: Beira, Vilanculos, Maputo"></div>
+        <div class="grid"><div class="field"><label for="startDate">Data de início / ida</label><input id="startDate" name="startDate" type="date"></div><div class="field"><label for="endDate">Data de regresso / fim</label><input id="endDate" name="endDate" type="date"></div></div>
+        <div class="field"><label for="people">Número de pessoas</label><select id="people" name="people"><option>1 pessoa</option><option selected>2 pessoas</option><option>3–5 pessoas</option><option>6 ou mais pessoas</option></select></div>
+        <div class="field"><label for="details">Informações adicionais</label><textarea id="details" name="details" placeholder="Ex.: tipo de quarto, número do voo, local de recolha, detalhes do evento ou informações sobre o visto."></textarea><span class="hint">Para pedidos de visto, indique a nacionalidade, o país de destino e o motivo da viagem. Não envie números de passaporte ou outros dados sensíveis neste formulário.</span></div>
+      </fieldset>
+      <button class="btn" type="submit">Enviar pedido pelo WhatsApp</button>
+      <div class="notice">Ao clicar, o WhatsApp abrirá com a mensagem preenchida. Reveja os dados e toque em <strong>Enviar</strong> no WhatsApp para concluir o pedido. A reserva só fica confirmada após validação pela agência.</div>
+    </form>
+  </section></main>
+  <footer><strong>Cadete Travel &amp; Tours</strong><br>WhatsApp: <a href="https://wa.me/258823905132" target="_blank" rel="noopener">+258 823 905 132</a><br>E-mail: cadetetours@gmail.com</footer>
+  <script>
+    const form = document.getElementById('bookingForm');
+    const startDate = document.getElementById('startDate');
+    const endDate = document.getElementById('endDate');
+    startDate.addEventListener('change', () => { endDate.min = startDate.value || ''; if (endDate.value && startDate.value && endDate.value < startDate.value) endDate.value = ''; });
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const val = id => document.getElementById(id).value.trim();
+      const message = [
+        '*PEDIDO DE RESERVA — CADETE TRAVEL & TOURS*','',
+        '*Nome:* ' + val('name'), '*Telefone/WhatsApp:* ' + val('phone'), '*E-mail:* ' + (val('email') || 'Não indicado'),
+        '*Serviço:* ' + val('service'), '*Destino/local:* ' + val('destination'),
+        '*Data de início/ida:* ' + (val('startDate') || 'A combinar'), '*Data de regresso/fim:* ' + (val('endDate') || 'A combinar'),
+        '*Número de pessoas:* ' + val('people'), '*Informações adicionais:* ' + (val('details') || 'Nenhuma'), '',
+        'Solicito informações sobre disponibilidade, preço e condições. Compreendo que este pedido não confirma automaticamente a reserva.'
+      ].join('\n');
+      const url = 'https://wa.me/258823905132?text=' + encodeURIComponent(message);
+      const opened = window.open(url, '_blank', 'noopener,noreferrer');
+      if (!opened) window.location.href = url;
+    });
+  </script>
+</body>
+</html>
