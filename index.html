@@ -220,14 +220,31 @@
     line-height: 1.5;
   }
 
-  /* SERVIÇOS */
+ /* SERVIÇOS */
+  #servicos {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    overflow: visible;
+  }
+
+  #servicos .container {
+    width: 92%;
+    overflow: visible;
+  }
+
   .cards {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 18px;
+    width: 100%;
   }
 
   .card {
+    width: 100%;
+    min-width: 0;
+    height: auto;
     padding: 24px 18px;
+    overflow: visible;
   }
 
   .card-icon {
