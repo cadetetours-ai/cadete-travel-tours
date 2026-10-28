@@ -73,11 +73,11 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  padding: 25px 20px;
+  padding: 15px 10px;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.65),
-    rgba(0, 0, 0, 0.08) 55%,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.15) 60%,
     rgba(0, 0, 0, 0)
   );
 }
@@ -153,11 +153,20 @@
 }
 
   .hero-overlay {
-  position: relative;
-  inset: auto;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   min-height: 0;
-  padding: 20px 15px;
-  background: #0875c9;
+  padding: 15px 10px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.15) 60%,
+    rgba(0, 0, 0, 0)
+  );
 }
 
   .hero-label {
