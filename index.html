@@ -285,11 +285,21 @@ h2.section-title {
     line-height: 1.5;
   }
 
-/* SERVIÇOS */
+/* SERVIÇOS — AJUSTE NO TELEMÓVEL */
 #servicos {
-  padding-top: 60px;
+  padding-top: 100px;
   padding-bottom: 40px;
   overflow: visible;
+}
+
+#servicos .section-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+#servicos .section-title h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
   #servicos .container {
@@ -441,7 +451,12 @@ h2.section-title {
     transform: translateY(-15px); 
   }
 }
-
+/* TESTE FINAL — POSIÇÃO DOS SERVIÇOS NO TELEMÓVEL */
+@media screen and (max-width: 550px) {
+  body #servicos {
+    padding-top: 140px !important;
+  }
+}
 </style>
 
 </head>
@@ -513,7 +528,7 @@ h2.section-title {
 
   <div class="section-title">
 
-    <h2 class="section-title">Os nossos serviços</h2>
+    <h2>Os nossos serviços</h2>
 
     <p>
       Soluções práticas para tornar a sua viagem mais simples.
