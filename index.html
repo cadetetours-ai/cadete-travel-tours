@@ -98,13 +98,14 @@
   flex-wrap: wrap;
 }
 
-.btn {
-  display: inline-block;
-  padding: 13px 24px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: 0.3s;
-  cursor: pointer;
+.btn{
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,.25);
 }
 
 .btn-primary {
@@ -287,7 +288,7 @@ h2.section-title {
 
 /* SERVIÇOS — AJUSTE NO TELEMÓVEL */
 #servicos {
-  padding-top: 100px;
+  padding-top: 40px;
   padding-bottom: 40px;
   overflow: visible;
 }
@@ -416,8 +417,7 @@ h2.section-title {
   .hero {
     position: relative;
     width: 100%;
-   height: 570px;
-    min-height: 0;
+    height: auto;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -425,15 +425,12 @@ h2.section-title {
   }
 
   .hero-image {
-    display: block;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: center;
-    margin: 0;
-  }
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
 
   .hero-overlay {
     position: absolute;
@@ -446,15 +443,13 @@ h2.section-title {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    box-sizing: border-box;
-    padding: 20px;
-    transform: translateY(-15px); 
-  }
+    padding-bottom: 40px;
+}
 }
 /* TESTE FINAL — POSIÇÃO DOS SERVIÇOS NO TELEMÓVEL */
 @media screen and (max-width: 550px) {
   body #servicos {
-    padding-top: 140px !important;
+    padding-top: 30px !important;
   }
 }
 </style>
@@ -489,23 +484,19 @@ h2.section-title {
     class="hero-image">
 
   <div class="hero-overlay">
-
-    <p class="hero-label">
-      ✈️ Agência de Viagens e Turismo em Beira, Sofala – Moçambique
-    </p>
-
+    
     <div class="buttons">
 
       <a
-        class="btn btn-primary"
-        href="https://wa.me/258823905132?text=Ola%2C%20Cadete%20Travel%20%26%20Services!%20Gostaria%20de%20fazer%20uma%20reserva%20e%20obter%20informacoes%20sobre%20os%20vossos%20servicos."
-        target="_blank"
-        rel="noopener">
-        💬 Falar connosco no WhatsApp
-      </a>
+  class="btn btn-primary"
+  href="https://wa.me/258823905132?text=Ola"
+  target="_blank"
+  rel="noopener">
+  💬 Falar connosco no WhatsApp
+</a>
 
       <a class="btn btn-secondary" href="#servicos">
-        🌍 Conhecer os nossos serviços
+       
       </a>
  <a
   class="btn btn-primary"
