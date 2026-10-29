@@ -418,6 +418,7 @@ h2.section-title {
     position: relative;
     width: 100%;
     height: auto;
+    max-height: 700px;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -425,16 +426,19 @@ h2.section-title {
   }
 
   .hero-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
+    display: block;
+    width: 100%;
+    max-height: 700px;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
 }
 
-  .hero-overlay {
-    position: absolute;
-    top: 0;
+ 
+.hero-overlay {
+position: absolute;
+top: 0;
     right: 0;
     bottom: 0;
     left: 0;
