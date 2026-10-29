@@ -3,66 +3,799 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Solicite reservas e orçamentos à Cadete Travel & Tours, Beira, Moçambique.">
-  <title>Formulário de Reserva | Cadete Travel & Tours</title>
+
+  <meta name="description" content="Solicite passagens aéreas, hotéis, transfers, tours, apoio para vistos e outros serviços à Cadete Travel & Services, em Beira, Moçambique.">
+
+  <title>Formulário de Reservas | Cadete Travel & Services</title>
+
   <style>
-    :root{--navy:#102b50;--blue:#174a7e;--gold:#d9b65d;--ink:#172334;--muted:#64748b;--line:#dce4ee;--bg:#f3f6fa}
-    *{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.5}
-    .hero{background:linear-gradient(135deg,#0b203c,var(--navy),#1d4c79);color:#fff;padding:28px 18px;text-align:center;border-bottom:4px solid var(--gold)}
-    .plane{font-size:36px;color:var(--gold);line-height:1.2}.brand{font-weight:800;letter-spacing:2px;font-size:clamp(23px,4vw,34px);margin:8px 0 0}.subbrand{color:#f0d68d;font-size:16px;margin:0}.slogan{margin:10px 0 0;font-size:14px}
-    main{max-width:760px;margin:26px auto;padding:0 14px 30px}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(18px,4vw,30px);box-shadow:0 8px 28px rgba(16,43,80,.08)}
-    h1{font-size:25px;margin:0 0 6px;color:var(--navy)}.intro{color:var(--muted);margin:0 0 24px;font-size:14px}fieldset{border:0;border-top:1px solid var(--line);padding:20px 0 0;margin:20px 0 0}legend{font-weight:700;color:var(--navy);padding:0 10px 0 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}label{font-weight:600;font-size:14px}
-    input,select,textarea{width:100%;border:1px solid #cbd5e1;border-radius:9px;padding:12px 13px;font:inherit;font-size:15px;background:#fff;color:var(--ink)}input:focus,select:focus,textarea:focus{outline:2px solid #a8c8e8;border-color:var(--blue)}textarea{min-height:100px;resize:vertical}.hint{font-size:12px;color:var(--muted);margin-top:-3px}
-    .btn{width:100%;border:0;border-radius:10px;padding:15px 18px;background:#16834a;color:white;font-size:16px;font-weight:700;cursor:pointer;margin-top:10px}.btn:hover{background:#116b3c}.notice{background:#f8f4e7;border:1px solid #ead9a4;color:#59491c;border-radius:9px;padding:12px 14px;font-size:13px;margin-top:16px}footer{text-align:center;color:var(--muted);font-size:13px;padding:0 10px 26px}footer a{color:var(--blue)}.required{color:#b42318}
-    @media(max-width:560px){.grid{grid-template-columns:1fr;gap:0}.hero{padding:25px 14px}.card{border-radius:12px}}
+    :root {
+      --navy: #102b50;
+      --blue: #174a7e;
+      --gold: #d9b65d;
+      --ink: #172334;
+      --muted: #64748b;
+      --line: #dce4ee;
+      --bg: #f3f6fa;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0b203c, var(--navy), #1d4c79);
+      color: #fff;
+      padding: 28px 18px;
+      text-align: center;
+      border-bottom: 4px solid var(--gold);
+    }
+
+    .plane {
+      font-size: 36px;
+      color: var(--gold);
+      line-height: 1.2;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: clamp(23px, 4vw, 34px);
+      margin: 8px 0 0;
+    }
+
+    .subbrand {
+      color: #f0d68d;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .slogan {
+      margin: 10px 0 0;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 26px auto;
+      padding: 0 14px 30px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: clamp(18px, 4vw, 30px);
+      box-shadow: 0 8px 28px rgba(16, 43, 80, .08);
+    }
+
+    h1 {
+      font-size: 25px;
+      margin: 0 0 6px;
+      color: var(--navy);
+    }
+
+    .intro {
+      color: var(--muted);
+      margin: 0 0 24px;
+      font-size: 14px;
+    }
+
+    fieldset {
+      border: 0;
+      border-top: 1px solid var(--line);
+      padding: 20px 0 0;
+      margin: 20px 0 0;
+      min-width: 0;
+    }
+
+    legend {
+      font-weight: 700;
+      color: var(--navy);
+      padding: 0 10px 0 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid #cbd5e1;
+      border-radius: 9px;
+      padding: 12px 13px;
+      font: inherit;
+      font-size: 15px;
+      background: #fff;
+      color: var(--ink);
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid #a8c8e8;
+      border-color: var(--blue);
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .hint {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: -3px;
+    }
+
+    .required {
+      color: #b42318;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      border: 0;
+      border-radius: 10px;
+      padding: 15px 18px;
+      background: #16834a;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #116b3c;
+    }
+
+    .notice {
+      background: #f8f4e7;
+      border: 1px solid #ead9a4;
+      color: #59491c;
+      border-radius: 9px;
+      padding: 12px 14px;
+      font-size: 13px;
+      margin-top: 16px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 0 10px 26px;
+    }
+
+    footer a { color: var(--blue); }
+
+    [hidden] { display: none !important; }
+
+    @media (max-width: 560px) {
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .hero { padding: 25px 14px; }
+      .card { border-radius: 12px; }
+    }
   </style>
 </head>
+
 <body>
   <header class="hero">
-    <div class="plane" aria-hidden="true">✈</div><div class="brand">CADETE</div><p class="subbrand">Travel &amp; Tours</p>
-    <p class="slogan">O seu destino, a nossa prioridade!</p><p style="margin:8px 0 0;font-size:13px">Beira, Sofala — Moçambique</p>
+    <div class="plane" aria-hidden="true">✈</div>
+    <div class="brand">CADETE</div>
+    <p class="subbrand">Travel &amp; Services</p>
+    <p class="slogan">O seu destino, a nossa prioridade!</p>
+    <p style="margin:8px 0 0;font-size:13px">
+      Beira, Sofala — Moçambique
+    </p>
   </header>
-  <main><section class="card">
-    <h1>Formulário de Reserva</h1><p class="intro">Preencha os dados para solicitar um orçamento ou uma reserva. Os campos assinalados com <span class="required">*</span> são obrigatórios.</p>
-    <form id="bookingForm">
-      <fieldset><legend>1. Dados do cliente</legend>
-        <div class="field"><label for="name">Nome completo <span class="required">*</span></label><input id="name" name="name" autocomplete="name" required placeholder="Introduza o seu nome completo"></div>
-        <div class="grid"><div class="field"><label for="phone">Telefone / WhatsApp <span class="required">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+258 ..."></div>
-        <div class="field"><label for="email">E-mail (opcional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="nome@exemplo.com"></div></div>
-      </fieldset>
-      <fieldset><legend>2. Detalhes do pedido</legend>
-        <div class="field"><label for="service">Serviço pretendido <span class="required">*</span></label><select id="service" name="service" required><option value="">— Seleccione um serviço —</option><option>Reserva de hotel / alojamento</option><option>Transfer (aeroporto, hotel ou outro local)</option><option>Tours e passeios turísticos</option><option>Aluguer de viatura</option><option>Organização e ornamentação de eventos</option><option>Apoio para vistos</option><option>Outro serviço</option></select></div>
-        <div class="field"><label for="destination">Destino ou local do serviço <span class="required">*</span></label><input id="destination" name="destination" required placeholder="Ex.: Beira, Vilanculos, Maputo"></div>
-        <div class="grid"><div class="field"><label for="startDate">Data de início / ida</label><input id="startDate" name="startDate" type="date"></div><div class="field"><label for="endDate">Data de regresso / fim</label><input id="endDate" name="endDate" type="date"></div></div>
-        <div class="field"><label for="people">Número de pessoas</label><select id="people" name="people"><option>1 pessoa</option><option selected>2 pessoas</option><option>3–5 pessoas</option><option>6 ou mais pessoas</option></select></div>
-        <div class="field"><label for="details">Informações adicionais</label><textarea id="details" name="details" placeholder="Ex.: tipo de quarto, número do voo, local de recolha, detalhes do evento ou informações sobre o visto."></textarea><span class="hint">Para pedidos de visto, indique a nacionalidade, o país de destino e o motivo da viagem. Não envie números de passaporte ou outros dados sensíveis neste formulário.</span></div>
-      </fieldset>
-      <button class="btn" type="submit">Enviar pedido pelo WhatsApp</button>
-      <div class="notice">Ao clicar, o WhatsApp abrirá com a mensagem preenchida. Reveja os dados e toque em <strong>Enviar</strong> no WhatsApp para concluir o pedido. A reserva só fica confirmada após validação pela agência.</div>
-    </form>
-  </section></main>
-  <footer><strong>Cadete Travel &amp; Tours</strong><br>WhatsApp: <a href="https://wa.me/258823905132" target="_blank" rel="noopener">+258 823 905 132</a><br>E-mail: cadetetours@gmail.com</footer>
+
+  <main>
+    <section class="card">
+      <h1>Formulário de Reservas e Serviços</h1>
+
+      <p class="intro">
+        Escolha o serviço pretendido e preencha os dados necessários
+        para solicitar informações, uma reserva ou um orçamento.
+        Os campos assinalados com <span class="required">*</span>
+        são obrigatórios.
+      </p>
+
+      <form id="bookingForm">
+
+        <fieldset>
+          <legend>1. Dados do cliente</legend>
+
+          <div class="field">
+            <label for="name">
+              Nome completo <span class="required">*</span>
+            </label>
+            <input id="name" name="name" autocomplete="name"
+              required placeholder="Introduza o seu nome completo">
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <label for="phone">
+                Telefone / WhatsApp <span class="required">*</span>
+              </label>
+              <input id="phone" name="phone" type="tel"
+                autocomplete="tel" required placeholder="+258 ...">
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail (opcional)</label>
+              <input id="email" name="email" type="email"
+                autocomplete="email" placeholder="nome@exemplo.com">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Serviço pretendido</legend>
+
+          <div class="field">
+            <label for="service">
+              Escolha o serviço <span class="required">*</span>
+            </label>
+
+            <select id="service" name="service" required>
+              <option value="">— Seleccione um serviço —</option>
+              <option value="Passagens aéreas">Passagens aéreas</option>
+              <option value="Reservas de hotéis">Reservas de hotéis</option>
+              <option value="Transfers">Transfers</option>
+              <option value="Tours">Tours e passeios turísticos</option>
+              <option value="Vistos e apoio documental">Vistos e apoio documental</option>
+              <option value="Apoio administrativo e serviços empresariais">Apoio administrativo e serviços empresariais</option>
+              <option value="Eventos">Eventos e ornamentação</option>
+              <option value="Aluguer de viaturas">Aluguer de viaturas</option>
+              <option value="Outro serviço">Outro serviço</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- PASSAGENS AÉREAS -->
+        <fieldset data-service-fields="Passagens aéreas" hidden>
+          <legend>3. Dados da viagem aérea</legend>
+
+          <div class="grid">
+            <div class="field">
+              <label for="flightOrigin">Origem *</label>
+              <input id="flightOrigin" data-required="true"
+                placeholder="Ex.: Beira">
+            </div>
+
+            <div class="field">
+              <label for="flightDestination">Destino *</label>
+              <input id="flightDestination" data-required="true"
+                placeholder="Ex.: Lisboa">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="flightType">Tipo de viagem *</label>
+            <select id="flightType" data-required="true">
+              <option value="">Seleccione</option>
+              <option>Ida e volta</option>
+              <option>Só ida</option>
+            </select>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <label for="flightDate">Data de ida *</label>
+              <input id="flightDate" type="date" data-required="true">
+            </div>
+
+            <div class="field" id="returnDateField">
+              <label for="flightReturn">Data de regresso</label>
+              <input id="flightReturn" type="date">
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <label for="flightPassengers">Passageiros *</label>
+              <select id="flightPassengers" data-required="true">
+                <option value="">Seleccione</option>
+                <option>1 adulto</option>
+                <option>2 adultos</option>
+                <option>3–5 passageiros</option>
+                <option>6 ou mais passageiros</option>
+                <option>Adultos e crianças</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="baggage">Bagagem despachada</label>
+              <select id="baggage">
+                <option>Por confirmar</option>
+                <option>Sim</option>
+                <option>Não</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- HOTÉIS -->
+        <fieldset data-service-fields="Reservas de hotéis" hidden>
+          <legend>3. Dados do alojamento</legend>
+
+          <div class="field">
+            <label for="hotelDestination">Cidade ou destino *</label>
+            <input id="hotelDestination" data-required="true"
+              placeholder="Ex.: Maputo, Beira, Lisboa">
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <label for="checkIn">Data de entrada *</label>
+              <input id="checkIn" type="date" data-required="true">
+            </div>
+
+            <div class="field">
+              <label for="checkOut">Data de saída *</label>
+              <input id="checkOut" type="date" data-required="true">
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <label for="hotelGuests">Número de hóspedes *</label>
+              <select id="hotelGuests" data-required="true">
+                <option value="">Seleccione</option>
+                <option>1 hóspede</option>
+                <option>2 hóspedes</option>
+                <option>3–5 hóspedes</option>
+                <option>6 ou mais hóspedes</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="roomType">Tipo de quarto</label>
+              <select id="roomType">
+                <option>Por confirmar</option>
+                <option>Individual</option>
+                <option>Duplo</option>
+                <option>Casal</option>
+                <option>Familiar</option>
+                <option>Outro</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- TRANSFERS -->
+        <fieldset data-service-fields="Transfers" hidden>
+          <legend>3. Dados do transfer</legend>
+
+          <div class="grid">
+            <div class="field">
+              <label for="pickup">Local de recolha *</label>
+              <input id="pickup" data-required="true"
+                placeholder="Ex.: Aeroporto da Beira">
+            </div>
+
+            <div class="field">
+              <label for="dropoff">Destino / local de chegada *</label>
+              <input id="dropoff" data-required="true"
+                placeholder="Ex.: Hotel em Ponta-Gêa">
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <label for="transferDate">Data *</label>
+              <input id="transferDate" type="date" data-required="true">
+            </div>
+
+            <div class="field">
+              <label for="transferTime">Hora prevista</label>
+              <input id="transferTime" type="time">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="transferPassengers">Número de passageiros *</label>
+            <select id="transferPassengers" data-required="true">
+              <option value="">Seleccione</option>
+              <option>1 passageiro</option>
+              <option>2–3 passageiros</option>
+              <option>4–7 passageiros</option>
+              <option>8 ou mais passageiros</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- TOURS -->
+        <fieldset data-service-fields="Tours" hidden>
+          <legend>3. Dados do tour</legend>
+
+          <div class="field">
+            <label for="tourDestination">Destino ou tour pretendido *</label>
+            <input id="tourDestination" data-required="true"
+              placeholder="Indique o local ou a experiência pretendida">
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <label for="tourDate">Data pretendida</label>
+              <input id="tourDate" type="date">
+            </div>
+
+            <div class="field">
+              <label for="tourPeople">Número de participantes *</label>
+              <select id="tourPeople" data-required="true">
+                <option value="">Seleccione</option>
+                <option>1 pessoa</option>
+                <option>2–3 pessoas</option>
+                <option>4–5 pessoas</option>
+                <option>6 ou mais pessoas</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- VISTOS -->
+        <fieldset data-service-fields="Vistos e apoio documental" hidden>
+          <legend>3. Dados do pedido de visto</legend>
+
+          <div class="field">
+            <label for="nationality">Nacionalidade *</label>
+            <input id="nationality" data-required="true"
+              placeholder="Ex.: Moçambicana">
+          </div>
+
+          <div class="field">
+            <label for="visaCountry">País de destino *</label>
+            <input id="visaCountry" data-required="true"
+              placeholder="Ex.: Portugal">
+          </div>
+
+          <div class="field">
+            <label for="visaPurpose">Finalidade da viagem *</label>
+            <select id="visaPurpose" data-required="true">
+              <option value="">Seleccione</option>
+              <option>Turismo / visita</option>
+              <option>Negócios</option>
+              <option>Estudos</option>
+              <option>Trabalho</option>
+              <option>Visita familiar</option>
+              <option>Trânsito</option>
+              <option>Outro motivo</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="visaDate">Data prevista da viagem</label>
+            <input id="visaDate" type="date">
+          </div>
+
+          <p class="hint">
+            Não introduza números de passaporte, dados bancários
+            ou outros dados pessoais sensíveis neste formulário.
+          </p>
+        </fieldset>
+
+        <!-- APOIO ADMINISTRATIVO -->
+        <fieldset data-service-fields="Apoio administrativo e serviços empresariais" hidden>
+          <legend>3. Serviço administrativo ou empresarial</legend>
+
+          <div class="field">
+            <label for="businessService">Tipo de apoio pretendido *</label>
+            <select id="businessService" data-required="true">
+              <option value="">Seleccione</option>
+              <option>Organização de documentos</option>
+              <option>Mapas e controlo em Excel</option>
+              <option>Controlo de caixa</option>
+              <option>Controlo de stock</option>
+              <option>Apoio administrativo</option>
+              <option>Tradução / apoio linguístico</option>
+              <option>Outro serviço empresarial</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="businessDescription">Descreva o que necessita *</label>
+            <textarea id="businessDescription" data-required="true"
+              placeholder="Explique brevemente o apoio pretendido."></textarea>
+          </div>
+        </fieldset>
+
+        <!-- EVENTOS -->
+        <fieldset data-service-fields="Eventos" hidden>
+          <legend>3. Dados do evento</legend>
+
+          <div class="field">
+            <label for="eventType">Tipo de evento *</label>
+            <select id="eventType" data-required="true">
+              <option value="">Seleccione</option>
+              <option>Casamento</option>
+              <option>Reunião</option>
+              <option>Festa / celebração</option>
+              <option>Evento empresarial</option>
+              <option>Outro evento</option>
+            </select>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <label for="eventLocation">Local do evento *</label>
+              <input id="eventLocation" data-required="true"
+                placeholder="Cidade ou local pretendido">
+            </div>
+
+            <div class="field">
+              <label for="eventDate">Data do evento</label>
+              <input id="eventDate" type="date">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="eventGuests">Número estimado de participantes</label>
+            <input id="eventGuests" type="number" min="1"
+              placeholder="Ex.: 50">
+          </div>
+        </fieldset>
+
+        <!-- ALUGUER DE VIATURAS -->
+        <fieldset data-service-fields="Aluguer de viaturas" hidden>
+          <legend>3. Dados do aluguer de viatura</legend>
+
+          <div class="field">
+            <label for="carLocation">Cidade ou local de utilização *</label>
+            <input id="carLocation" data-required="true"
+              placeholder="Ex.: Beira">
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <label for="carStart">Data de início *</label>
+              <input id="carStart" type="date" data-required="true">
+            </div>
+
+            <div class="field">
+              <label for="carEnd">Data de fim *</label>
+              <input id="carEnd" type="date" data-required="true">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="carType">Tipo de viatura</label>
+            <select id="carType">
+              <option>Por confirmar</option>
+              <option>Pequena / citadina</option>
+              <option>Sedan</option>
+              <option>SUV / 4x4</option>
+              <option>Minibus</option>
+              <option>Outra categoria</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="driver">Preferência de condução</label>
+            <select id="driver">
+              <option>Por confirmar</option>
+              <option>Com motorista</option>
+              <option>Sem motorista</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- OUTRO SERVIÇO -->
+        <fieldset data-service-fields="Outro serviço" hidden>
+          <legend>3. Descrição do pedido</legend>
+
+          <div class="field">
+            <label for="otherDescription">Que serviço pretende? *</label>
+            <textarea id="otherDescription" data-required="true"
+              placeholder="Descreva o serviço de que necessita."></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Informações adicionais</legend>
+
+          <div class="field">
+            <label for="details">Observações (opcional)</label>
+            <textarea id="details"
+              placeholder="Indique outras preferências ou informações relevantes."></textarea>
+          </div>
+        </fieldset>
+
+        <button class="btn" type="submit">
+          Enviar pedido pelo WhatsApp
+        </button>
+
+        <div class="notice">
+          O WhatsApp abrirá com a mensagem preenchida. Reveja os dados
+          e toque em <strong>Enviar</strong> no WhatsApp para concluir
+          o pedido. A reserva ou serviço só será confirmado após
+          validação pela agência.
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Cadete Travel &amp; Services</strong><br>
+    WhatsApp:
+    <a href="https://wa.me/258823905132"
+       target="_blank" rel="noopener">+258 823 905 132</a><br>
+    E-mail:
+    <a href="mailto:cadetetours@gmail.com">cadetetours@gmail.com</a><br>
+    Beira, Sofala — Moçambique
+  </footer>
+
   <script>
     const form = document.getElementById('bookingForm');
-    const startDate = document.getElementById('startDate');
-    const endDate = document.getElementById('endDate');
-    startDate.addEventListener('change', () => { endDate.min = startDate.value || ''; if (endDate.value && startDate.value && endDate.value < startDate.value) endDate.value = ''; });
+    const serviceSelect = document.getElementById('service');
+    const serviceSections = document.querySelectorAll('[data-service-fields]');
+
+    function updateServiceFields() {
+      const selectedService = serviceSelect.value;
+
+      serviceSections.forEach(section => {
+        const active = section.dataset.serviceFields === selectedService;
+        section.hidden = !active;
+
+        section.querySelectorAll('input, select, textarea').forEach(field => {
+          field.required = active && field.dataset.required === 'true';
+
+          if (!active) {
+            field.value = '';
+          }
+        });
+      });
+
+      const returnDate = document.getElementById('flightReturn');
+      const returnDateField = document.getElementById('returnDateField');
+      const isRoundTrip =
+        document.getElementById('flightType').value === 'Ida e volta';
+
+      if (returnDateField) {
+        returnDateField.hidden =
+          selectedService !== 'Passagens aéreas' || !isRoundTrip;
+
+        returnDate.required =
+          selectedService === 'Passagens aéreas' && isRoundTrip;
+
+        if (returnDateField.hidden) {
+          returnDate.value = '';
+        }
+      }
+    }
+
+    serviceSelect.addEventListener('change', updateServiceFields);
+    document.getElementById('flightType').addEventListener('change', updateServiceFields);
+
+    function valueOf(id) {
+      const field = document.getElementById(id);
+      return field ? field.value.trim() : '';
+    }
+
+    function addLine(lines, label, value) {
+      if (value) {
+        lines.push('*' + label + ':* ' + value);
+      }
+    }
+
     form.addEventListener('submit', function(event) {
       event.preventDefault();
+
       if (!form.reportValidity()) return;
-      const val = id => document.getElementById(id).value.trim();
-      const message = [
-        '*PEDIDO DE RESERVA — CADETE TRAVEL & TOURS*','',
-        '*Nome:* ' + val('name'), '*Telefone/WhatsApp:* ' + val('phone'), '*E-mail:* ' + (val('email') || 'Não indicado'),
-        '*Serviço:* ' + val('service'), '*Destino/local:* ' + val('destination'),
-        '*Data de início/ida:* ' + (val('startDate') || 'A combinar'), '*Data de regresso/fim:* ' + (val('endDate') || 'A combinar'),
-        '*Número de pessoas:* ' + val('people'), '*Informações adicionais:* ' + (val('details') || 'Nenhuma'), '',
-        'Solicito informações sobre disponibilidade, preço e condições. Compreendo que este pedido não confirma automaticamente a reserva.'
-      ].join('\n');
-      const url = 'https://wa.me/258823905132?text=' + encodeURIComponent(message);
-      const opened = window.open(url, '_blank', 'noopener,noreferrer');
-      if (!opened) window.location.href = url;
+
+      const service = serviceSelect.value;
+
+      const lines = [
+        '*PEDIDO — CADETE TRAVEL & SERVICES*',
+        '',
+        '*Nome:* ' + valueOf('name'),
+        '*Telefone/WhatsApp do cliente:* ' + valueOf('phone'),
+        '*E-mail:* ' + (valueOf('email') || 'Não indicado'),
+        '*Serviço:* ' + service,
+        ''
+      ];
+
+      const fieldsByService = {
+        'Passagens aéreas': [
+          ['Origem', 'flightOrigin'],
+          ['Destino', 'flightDestination'],
+          ['Tipo de viagem', 'flightType'],
+          ['Data de ida', 'flightDate'],
+          ['Data de regresso', 'flightReturn'],
+          ['Passageiros', 'flightPassengers'],
+          ['Bagagem despachada', 'baggage']
+        ],
+        'Reservas de hotéis': [
+          ['Destino', 'hotelDestination'],
+          ['Entrada', 'checkIn'],
+          ['Saída', 'checkOut'],
+          ['Hóspedes', 'hotelGuests'],
+          ['Tipo de quarto', 'roomType']
+        ],
+        'Transfers': [
+          ['Local de recolha', 'pickup'],
+          ['Destino', 'dropoff'],
+          ['Data', 'transferDate'],
+          ['Hora', 'transferTime'],
+          ['Passageiros', 'transferPassengers']
+        ],
+        'Tours': [
+          ['Destino / tour', 'tourDestination'],
+          ['Data pretendida', 'tourDate'],
+          ['Participantes', 'tourPeople']
+        ],
+        'Vistos e apoio documental': [
+          ['Nacionalidade', 'nationality'],
+          ['País de destino', 'visaCountry'],
+          ['Finalidade da viagem', 'visaPurpose'],
+          ['Data prevista', 'visaDate']
+        ],
+        'Apoio administrativo e serviços empresariais': [
+          ['Tipo de serviço', 'businessService'],
+          ['Descrição', 'businessDescription']
+        ],
+        'Eventos': [
+          ['Tipo de evento', 'eventType'],
+          ['Local', 'eventLocation'],
+          ['Data', 'eventDate'],
+          ['Participantes estimados', 'eventGuests']
+        ],
+        'Aluguer de viaturas': [
+          ['Local de utilização', 'carLocation'],
+          ['Início do aluguer', 'carStart'],
+          ['Fim do aluguer', 'carEnd'],
+          ['Tipo de viatura', 'carType'],
+          ['Preferência de condução', 'driver']
+        ],
+        'Outro serviço': [
+          ['Descrição do pedido', 'otherDescription']
+        ]
+      };
+
+      (fieldsByService[service] || []).forEach(([label, id]) => {
+        addLine(lines, label, valueOf(id));
+      });
+
+      addLine(lines, 'Observações', valueOf('details'));
+
+      lines.push(
+        '',
+        'Solicito informações sobre disponibilidade, preços e condições.',
+        'Compreendo que este pedido não confirma automaticamente uma reserva.'
+      );
+
+      const message = lines.join('\n');
+      const url =
+        'https://wa.me/258823905132?text=' + encodeURIComponent(message);
+
+      window.location.href = url;
     });
+
+    updateServiceFields();
   </script>
 </body>
 </html>
