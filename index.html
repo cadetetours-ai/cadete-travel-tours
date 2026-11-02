@@ -18,7 +18,7 @@
   "name": "Cadete Travel & Services",
   "description": "Agência de viagens em Beira, Moçambique. Passagens aéreas, reservas de hotéis, transfers, tours, vistos e apoio documental, aluguer de viaturas, eventos, apoio administrativo e serviços empresariais.",
   "url": "https://cadetetours-ai.github.io/cadete-travel-tours/",
-  "telephone": "+258845058349",
+  "telephone": "+258875058349",
   "email": "cadetetours@gmail.com",
   "areaServed": [
     {
@@ -30,13 +30,20 @@
       "name": "Moçambique"
     }
   ],
-  
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+258823905132",
-    "contactType": "Reservas e atendimento pelo WhatsApp",
-    "availableLanguage": "Portuguese"
-  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+258845058349",
+      "contactType": "Atendimento telefónico",
+      "availableLanguage": "Portuguese"
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+258823905132",
+      "contactType": "Reservas e atendimento pelo WhatsApp",
+      "availableLanguage": "Portuguese"
+    }
+  ],
   "sameAs": [
     "https://www.instagram.com/cadetetravelandtours/",
     "https://www.facebook.com/profile.php?id=61595249157349"
@@ -90,6 +97,8 @@ nav {
   gap: 22px;
   flex-wrap: wrap;
 }
+
+.hero {
   position: relative;
   width: 100%;
   height: auto;
@@ -1044,7 +1053,7 @@ eventos, apoio em vistos ou qualquer informação sobre os nossos serviços.
 
   <div class="copyright">
 
-    © 2026 Cadete Travel & Services.
+    © <span id="year">2026</span> Cadete Travel & Services.
     Todos os direitos reservados.
 
   </div>
@@ -1068,6 +1077,9 @@ eventos, apoio em vistos ou qualquer informação sobre os nossos serviços.
    title="Enviar Email">
    ✉️
 </a>
-  </body>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
 
 </html>
