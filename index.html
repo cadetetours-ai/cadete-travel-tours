@@ -1,696 +1,765 @@
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Cadete Travel & Services | Agência de Viagens em Beira, Moçambique</title>
+  <title>Cadete Travel &amp; Services | Agência de Viagens em Beira, Moçambique</title>
 
-    <meta name="description" content="Cadete Travel & Services, agência de viagens em Beira, Moçambique. Passagens aéreas, hotéis, transfers, tours, vistos, aluguer de viaturas, eventos e apoio administrativo. O seu destino, a nossa prioridade!" />
+  <meta name="description" content="Cadete Travel & Services, agência de viagens em Beira, Moçambique. Passagens aéreas, hotéis, transfers, tours, vistos, aluguer de viaturas, eventos e apoio administrativo. O seu destino, a nossa prioridade!">
+  <meta name="author" content="Cadete Travel & Services">
+  <meta name="robots" content="index, follow">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TravelAgency",
-  "name": "Cadete Travel & Services",
-  "description": "Agência de viagens em Beira, Moçambique. Passagens aéreas, reservas de hotéis, transfers, tours, vistos e apoio documental, aluguer de viaturas, eventos, apoio administrativo e serviços empresariais.",
-  "url": "https://cadetetours-ai.github.io/cadete-travel-tours/",
-  "telephone": "+258875058349",
-  "email": "cadetetours@gmail.com",
-  "areaServed": [
-    {
-      "@type": "City",
-      "name": "Beira"
-    },
-    {
-      "@type": "Country",
-      "name": "Moçambique"
+  <meta property="og:title" content="Cadete Travel & Services | Agência de Viagens em Beira">
+  <meta property="og:description" content="Passagens aéreas, hotéis, transfers, tours, vistos, aluguer de viaturas, eventos e apoio administrativo.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cadetetours-ai.github.io/cadete-travel-tours/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Cadete Travel & Services",
+    "description": "Agência de viagens em Beira, Moçambique. Passagens aéreas, reservas de hotéis, transfers, tours, vistos e apoio documental, aluguer de viaturas, eventos, apoio administrativo e serviços empresariais.",
+    "url": "https://cadetetours-ai.github.io/cadete-travel-tours/",
+    "telephone": "+258875058349",
+    "email": "cadetetours@gmail.com",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Beira"
+      },
+      {
+        "@type": "Country",
+        "name": "Moçambique"
+      }
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+258845058349",
+        "contactType": "Atendimento telefónico",
+        "availableLanguage": "Portuguese"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+258823905132",
+        "contactType": "Reservas e atendimento pelo WhatsApp",
+        "availableLanguage": "Portuguese"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/cadetetravelandtours/",
+      "https://www.facebook.com/profile.php?id=61595249157349"
+    ]
+  }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-  ],
-  "contactPoint": [
-    {
-      "@type": "ContactPoint",
-      "telephone": "+258845058349",
-      "contactType": "Atendimento telefónico",
-      "availableLanguage": "Portuguese"
-    },
-    {
-      "@type": "ContactPoint",
-      "telephone": "+258823905132",
-      "contactType": "Reservas e atendimento pelo WhatsApp",
-      "availableLanguage": "Portuguese"
+
+    html {
+      scroll-behavior: smooth;
     }
-  ],
-  "sameAs": [
-    "https://www.instagram.com/cadetetravelandtours/",
-    "https://www.facebook.com/profile.php?id=61595249157349"
-  ]
-}
-</script>
 
-<style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  color: #222;
-  background: #fff;
-}
-a { text-decoration: none; color: inherit; }
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fff;
+    }
 
-/* HEADER */
-header {
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-.header-content {
-  min-height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #c62828;
-}
-.logo span { color: #1b5e20; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-/* BOTOES DO CABECALHO */
-.header-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.btn-whatsapp,
-.btn-reserva {
-  display: inline-block;
-  padding: 10px 14px;
-  border-radius: 6px;
-  text-align: center;
-  font-size: 13px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.btn-whatsapp {
-  background-color: #168b50;
-  color: #ffffff;
-}
-.btn-whatsapp:hover {
-  background-color: #116b3d;
-  color: #ffffff;
-}
-.btn-reserva {
-  background-color: #0875c9;
-  color: #ffffff;
-}
-.btn-reserva:hover {
-  background-color: #065a9c;
-  color: #ffffff;
-}
-nav {
-  display: flex;
-  gap: 22px;
-  flex-wrap: wrap;
-}
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-/* HERO */
-.hero {
-  position: relative;
-  width: 100%;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  background: #fff;
-  text-align: center;
-  color: #fff;
-  overflow: hidden;
-}
-.hero-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  object-position: center center;
-  margin: 0;
-  background: #0875c9;
-}
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding-bottom: 40px;
-}
-.hero-label {
-  font-size: 18px;
-  line-height: 1.4;
-  margin-bottom: 18px;
-  text-shadow: 0 2px 5px rgba(0,0,0,.7);
-}
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-.btn {
-  display: inline-block;
-  padding: 13px 24px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: 0.3s;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,.25);
-}
-.btn-primary {
-  background: #c62828;
-  color: #fff;
-}
-.btn-primary:hover { background: #a91f1f; }
-.btn-secondary {
-  background: #fff;
-  color: #222;
-}
-.btn-secondary:hover { background: #eee; }
+    /* CABEÇALHO */
 
-/* SECTIONS */
-section { padding: 70px 0; }
-.section-title {
-  text-align: center;
-  margin-bottom: 40px;
-}
-.section-title h2,
-h2.section-title {
-  font-size: 32px;
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
-.section-title p { color: #666; }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-/* SERVICES */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-.card {
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 28px 20px;
-  text-align: center;
-  background: #fff;
-  box-shadow: 0 4px 15px rgba(0,0,0,.06);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.card-icon {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-.card h3 { margin-bottom: 10px; }
-.card p {
-  color: #666;
-  font-size: 15px;
-  margin-bottom: 20px;
-}
-.service-button {
-  margin-top: auto;
-  font-size: 14px;
-  padding: 10px 18px;
-}
+    .header-content {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-/* ABOUT */
-.about { background: #f7f7f7; }
-.about-content {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-.about-content p {
-  margin-bottom: 15px;
-  color: #555;
-}
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #c62828;
+      white-space: nowrap;
+    }
 
-/* DESTINATIONS */
-.destinations {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-.destination {
-  min-height: 210px;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: flex-end;
-}
-.destination-content {
-  width: 100%;
-  padding: 20px;
-  color: #fff;
-  background: linear-gradient(transparent, rgba(0,0,0,.8));
-}
-.destination h3 { font-size: 22px; }
-.beira {
-  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80");
-}
-.vilanculos {
-  background-image: url("https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80");
-}
-.maputo {
-  background-image: url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80");
-}
-.mozambique {
-  background-image: url("https://images.unsplash.com/photo-1489493585363-d69421e0edd3?auto=format&fit=crop&w=900&q=80");
-}
+    .logo span {
+      color: #1b5e20;
+    }
 
-/* TRANSFERS */
-.transfer-list {
-  max-width: 850px;
-  margin: auto;
-}
-.transfer-item {
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-.transfer-item strong {
-  display: block;
-  margin-bottom: 4px;
-}
-.transfer-description { color: #555; }
-.transfer-button { white-space: nowrap; }
+    .header-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-/* CONTACT */
-.contact { background: #f7f7f7; }
-.contact-content {
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-}
-.contact-info {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 30px;
-}
-.contact-box {
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  border: 1px solid #eee;
-}
-.contact-box h3 { margin-bottom: 8px; }
-.contact-box a {
-  color: #1b5e20;
-  font-weight: bold;
-}
-.contact-box a:hover { color: #c62828; }
+    .btn-whatsapp,
+    .btn-reserva {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold;
+      transition: .3s;
+    }
 
-/* FOOTER */
-footer {
-  background: #1f1f1f;
-  color: #fff;
-  padding: 50px 0 20px;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 35px;
-}
-footer h3 { margin-bottom: 15px; }
-footer p, footer li {
-  color: #ccc;
-  font-size: 14px;
-}
-footer ul { list-style: none; }
-footer li { margin-bottom: 8px; }
-.copyright {
-  border-top: 1px solid #444;
-  padding-top: 20px;
-  text-align: center;
-  color: #aaa;
-  font-size: 13px;
-}
+    .btn-whatsapp {
+      background: #168b50;
+      color: #fff;
+    }
 
-/* WHATSAPP */
-.whatsapp-float {
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: #25d366;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 29px;
-  box-shadow: 0 4px 15px rgba(0,0,0,.25);
-  z-index: 2000;
-}
-.whatsapp-float:hover { transform: scale(1.08); }
+    .btn-whatsapp:hover {
+      background: #116b3d;
+    }
 
-/* BOTÃO DE EMAIL */
-.email-float {
-  position: fixed;
-  right: 22px;
-  bottom: 92px;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: #1877d2;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  box-shadow: 0 4px 15px rgba(0,0,0,.25);
-  z-index: 2000;
-}
-.email-float:hover { transform: scale(1.08); }
+    .btn-reserva {
+      background: #0875c9;
+      color: #fff;
+    }
 
-/* MOBILE */
-@media (max-width: 850px) {
-  .header-content {
-    flex-direction: column;
-    padding: 15px 0;
-  }
-  nav { justify-content: center; }
+    .btn-reserva:hover {
+      background: #065a9c;
+    }
 
-  .hero {
-    height: auto;
-    min-height: 0;
-    padding: 0;
-    margin: 0;
-  }
-  .hero-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: center top;
-  }
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 15px 10px;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.75),
-      rgba(0, 0, 0, 0.15) 60%,
-      rgba(0, 0, 0, 0)
-    );
-  }
-  .hero-label {
-    font-size: 15px;
-    margin-bottom: 12px;
-  }
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    width: 100%;
-    max-width: 100%;
-  }
-  .hero-overlay .buttons .btn {
-    display: block;
-    width: 100%;
-    max-width: 340px;
-    padding: 8px 10px;
-    text-align: center;
-    white-space: normal;
-    line-height: 1.3;
-    font-size: 13px;
-  }
-  .buttons .btn {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    padding: 12px 10px;
-    text-align: center;
-    white-space: normal;
-    overflow-wrap: anywhere;
-    line-height: 1.4;
-  }
-  .cards,
-  .destinations {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .contact-info,
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-  #servicos { padding-top: 20px; }
-  #servicos .section-title { margin-bottom: 25px; }
-}
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
 
-@media (max-width: 550px) {
-  .container { width: 92%; }
-  .header-content {
-    min-height: auto;
-    padding: 12px 0;
-    gap: 10px;
-  }
-  .logo {
-    font-size: 20px;
-    line-height: 1.2;
-    text-align: center;
-  }
-  nav {
-    width: 100%;
-    gap: 10px 14px;
-    justify-content: center;
-  }
-  nav a { font-size: 13px; }
+    nav a {
+      font-size: 14px;
+    }
 
-  /* SEÇÕES */
-  section { padding: 50px 0; }
-  .section-title { margin-bottom: 30px; }
-  .section-title h2,
-  h2.section-title {
-    font-size: 27px;
-    line-height: 1.2;
-    margin-top: 20px;
-  }
-  .section-title p {
-    font-size: 15px;
-    line-height: 1.5;
-  }
+    nav a:hover {
+      color: #c62828;
+    }
 
-  /* SERVIÇOS — AJUSTE NO TELEMÓVEL */
-  #servicos {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    overflow: visible;
-  }
-  #servicos .section-title {
-    margin-top: 0;
-    margin-bottom: 25px;
-  }
-  #servicos .section-title h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  #servicos .container {
-    width: 92%;
-    overflow: visible;
-  }
-  .cards {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 18px;
-    width: 100%;
-  }
-  .card {
-    width: 100%;
-    min-width: 0;
-    height: auto;
-    padding: 24px 18px;
-    overflow: visible;
-  }
-  .card-icon { font-size: 38px; }
- .card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
+    /* BANNER */
 
-  .card p {
-    font-size: 15px;
-    line-height: 1.5;
-  }
+    .hero {
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      background: #0875c9;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
 
-  .service-button {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    white-space: normal;
-    overflow-wrap: break-word;
-    line-height: 1.4;
-  }
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+      margin: 0;
+    }
 
-  #servicos .card p {
-    display: block;
-    height: auto;
-    overflow: visible;
-    white-space: normal;
-    line-height: 1.5;
-  }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 20px 40px;
+    }
 
-  /* DESTINOS */
-  .destinations {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-  .destination {
-    min-height: 230px;
-  }
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: .3s;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,.25);
+    }
 
-  .destination-content {
-    padding: 18px;
-  }
+    .btn-primary {
+      background: #c62828;
+      color: #fff;
+    }
 
-  /* TRANSFERS */
-  .transfer-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 20px 0;
-  }
+    .btn-primary:hover {
+      background: #a91f1f;
+    }
 
-  .transfer-button {
-    width: 100%;
-    text-align: center;
-  }
+    .btn-secondary {
+      background: #fff;
+      color: #222;
+    }
 
-  /* CONTACTO */
-  .contact-info {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
+    .btn-secondary:hover {
+      background: #eee;
+    }
 
-  .contact-box {
-    padding: 20px 15px;
-  }
+    /* SECÇÕES */
 
-  /* FOOTER */
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
+    section {
+      padding: 70px 0;
+    }
 
-  footer {
-    padding: 40px 0 20px;
-  }
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-  /* WHATSAPP FLUTUANTE */
-  .whatsapp-float {
-    width: 54px;
-    height: 54px;
-    right: 15px;
-    bottom: 15px;
-    font-size: 27px;
-  }
-}
+    .section-title h2,
+    h2.section-title {
+      font-size: 32px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
 
-/* Ajuste do banner no computador - imagem completa */
-@media (min-width: 851px) {
-  .hero {
-    position: relative;
-    width: 100%;
-    height: auto;
-    max-height: 650px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: #0875c9;
-  }
+    .section-title p {
+      color: #666;
+    }
 
-  .hero-image {
-    display: block;
-    width: 100%;
-    max-height: 700px;
-    height: auto;
-    object-fit: contain;
-    object-position: center;
-  }
+    /* SERVIÇOS */
 
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding-bottom: 40px;
-  }
-}
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
 
-/* TESTE FINAL — POSIÇÃO DOS SERVIÇOS NO TELEMÓVEL */
-@media screen and (max-width: 550px) {
-  body #servicos {
-    padding-top: 30px !important;
-  }
-}
-</style>
+    .card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 28px 20px;
+      text-align: center;
+      background: #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,.06);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 0;
+    }
 
+    .card-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .service-button {
+      margin-top: auto;
+      font-size: 14px;
+      padding: 10px 18px;
+    }
+
+    /* SOBRE */
+
+    .about {
+      background: #f7f7f7;
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content p {
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    /* DESTINOS */
+
+    .destinations {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .destination {
+      min-height: 210px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .destination-content {
+      width: 100%;
+      padding: 20px;
+      color: #fff;
+      background: linear-gradient(transparent, rgba(0,0,0,.8));
+    }
+
+    .destination h3 {
+      font-size: 22px;
+    }
+
+    .beira {
+      background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .vilanculos {
+      background-image: url("https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .maputo {
+      background-image: url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .mozambique {
+      background-image: url("https://images.unsplash.com/photo-1489493585363-d69421e0edd3?auto=format&fit=crop&w=900&q=80");
+    }
+
+    /* TRANSFERS */
+
+    .transfer-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .transfer-item {
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .transfer-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .transfer-description {
+      color: #555;
+    }
+
+    .transfer-button {
+      white-space: nowrap;
+    }
+
+    /* CONTACTOS */
+
+    .contact {
+      background: #f7f7f7;
+    }
+
+    .contact-content {
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .contact-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-box h3 {
+      margin-bottom: 8px;
+    }
+
+    .contact-box a {
+      color: #1b5e20;
+      font-weight: bold;
+    }
+
+    .contact-box a:hover {
+      color: #c62828;
+    }
+
+    /* RODAPÉ */
+
+    footer {
+      background: #1f1f1f;
+      color: #fff;
+      padding: 50px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 35px;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer li {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 8px;
+    }
+
+    .copyright {
+      border-top: 1px solid #444;
+      padding-top: 20px;
+      text-align: center;
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    /* BOTÕES FLUTUANTES */
+
+    .whatsapp-float,
+    .email-float {
+      position: fixed;
+      right: 22px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,.25);
+      z-index: 2000;
+      transition: transform .3s;
+    }
+
+    .whatsapp-float {
+      bottom: 22px;
+      background: #25d366;
+      font-size: 29px;
+    }
+
+    .email-float {
+      bottom: 92px;
+      background: #1877d2;
+      font-size: 25px;
+    }
+
+    .whatsapp-float:hover,
+    .email-float:hover {
+      transform: scale(1.08);
+    }
+
+    /* TABLET */
+
+    @media (max-width: 1100px) {
+      .header-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 12px 0;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .destinations {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* TELEMÓVEL */
+
+    @media (max-width: 850px) {
+      .header-content {
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 12px;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero-overlay {
+        padding: 15px 10px;
+        background: linear-gradient(
+          to top,
+          rgba(0,0,0,.75),
+          rgba(0,0,0,.15) 60%,
+          transparent
+        );
+      }
+
+      .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        width: 100%;
+      }
+
+      .hero-overlay .buttons .btn {
+        display: block;
+        width: 100%;
+        max-width: 340px;
+        padding: 8px 10px;
+        text-align: center;
+        white-space: normal;
+        line-height: 1.3;
+        font-size: 13px;
+      }
+
+      .contact-info,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #servicos {
+        padding-top: 30px;
+      }
+
+      #servicos .section-title {
+        margin-bottom: 25px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .container {
+        width: 92%;
+      }
+
+      .header-content {
+        min-height: auto;
+        padding: 12px 0;
+        gap: 10px;
+      }
+
+      .logo {
+        font-size: 20px;
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      nav {
+        width: 100%;
+        gap: 10px 14px;
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      section {
+        padding: 50px 0;
+      }
+
+      .section-title {
+        margin-bottom: 30px;
+      }
+
+      .section-title h2,
+      h2.section-title {
+        font-size: 27px;
+        line-height: 1.2;
+      }
+
+      .section-title p {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      #servicos {
+        padding-top: 30px;
+        padding-bottom: 40px;
+      }
+
+      #servicos .section-title {
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+
+      #servicos .section-title h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      #servicos .container {
+        width: 92%;
+      }
+
+      .cards {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        width: 100%;
+      }
+
+      .card {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        padding: 24px 18px;
+      }
+
+      .card-icon {
+        font-size: 38px;
+      }
+
+      .card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .card p {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .service-button {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        white-space: normal;
+        overflow-wrap: break-word;
+        line-height: 1.4;
+      }
+
+      .destinations {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .destination {
+        min-height: 230px;
+      }
+
+      .destination-content {
+        padding: 18px;
+      }
+
+      .transfer-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px 0;
+      }
+
+      .transfer-button {
+        width: 100%;
+        text-align: center;
+        white-space: normal;
+      }
+
+      .contact-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .contact-box {
+        padding: 20px 15px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      footer {
+        padding: 40px 0 20px;
+      }
+
+      .whatsapp-float,
+      .email-float {
+        width: 54px;
+        height: 54px;
+        right: 15px;
+      }
+
+      .whatsapp-float {
+        bottom: 15px;
+        font-size: 27px;
+      }
+
+      .email-float {
+        bottom: 80px;
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
   <div class="container header-content">
-    <a href="#inicio" class="logo">
+
+    <a href="#inicio" class="logo" aria-label="Cadete Travel & Services - Início">
       <strong>Cadete</strong>
       <span>Travel &amp; Services</span>
     </a>
 
     <div class="header-buttons">
       <a href="https://wa.me/258823905132?text=Ola%2C%20Cadete%20Travel%20%26%20Services!%20Gostaria%20de%20obter%20informacoes."
-         class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+         class="btn-whatsapp"
+         target="_blank"
+         rel="noopener noreferrer">
         Falar connosco no WhatsApp
       </a>
 
@@ -700,17 +769,19 @@ footer li { margin-bottom: 8px; }
       </a>
     </div>
 
-    <nav>
+    <nav aria-label="Navegação principal">
       <a href="#inicio">Início</a>
       <a href="#servicos">Serviços</a>
       <a href="#destinos">Destinos</a>
       <a href="#transfers">Transfers</a>
       <a href="#contacto">Contacto</a>
     </nav>
+
   </div>
 </header>
 
-<!-- HERO -->
+<!-- BANNER PRINCIPAL -->
+
 <section class="hero" id="inicio">
 
   <img
@@ -724,14 +795,14 @@ footer li { margin-bottom: 8px; }
       <a class="btn btn-primary"
          href="https://wa.me/258823905132?text=Ola%2C%20Cadete%20Travel%20%26%20Services!%20Gostaria%20de%20obter%20informacoes%20sobre%20os%20vossos%20servicos."
          target="_blank"
-         rel="noopener">
+         rel="noopener noreferrer">
         💬 Falar connosco no WhatsApp
       </a>
 
       <a class="btn btn-primary"
          href="formulario-reserva-cadete-travel-tours.html"
          target="_blank"
-         rel="noopener">
+         rel="noopener noreferrer">
         📅 Fazer Reserva
       </a>
 
@@ -740,21 +811,26 @@ footer li { margin-bottom: 8px; }
 
 </section>
 
-<!-- TÍTULO PRINCIPAL PARA SEO -->
-<section id="apresentacao" style="padding: 30px 0 10px;">
-  <div class="container" style="text-align: center;">
-    <h1 style="font-size: 30px; line-height: 1.3; margin-bottom: 12px;">
+<!-- APRESENTAÇÃO -->
+
+<section id="apresentacao" style="padding:30px 0 10px;">
+  <div class="container" style="text-align:center;">
+
+    <h1 style="font-size:30px;line-height:1.3;margin-bottom:12px;">
       Agência de Viagens em Beira, Moçambique | Cadete Travel &amp; Services
     </h1>
-    <p style="max-width: 850px; margin: 0 auto; color: #555;">
+
+    <p style="max-width:850px;margin:0 auto;color:#555;">
       Passagens aéreas, hotéis, transfers, tours, apoio para vistos,
       aluguer de viaturas, eventos e serviços administrativos.
       O seu destino, a nossa prioridade!
     </p>
+
   </div>
 </section>
 
 <!-- SERVIÇOS -->
+
 <section id="servicos">
   <div class="container">
 
@@ -768,7 +844,6 @@ footer li { margin-bottom: 8px; }
 
     <div class="cards">
 
-      <!-- VIAGENS, HOTÉIS E TRANSFERS -->
       <div class="card">
         <div class="card-icon">✈️</div>
         <h3>Viagens, Hotéis e Transfers</h3>
@@ -776,16 +851,14 @@ footer li { margin-bottom: 8px; }
           Apoio na organização de viagens, pedidos de passagens aéreas,
           reservas de hotéis, transfers e tours em Moçambique.
         </p>
-        <a
-          class="btn btn-primary service-button"
-          href="https://wa.me/258823905132?text=Ol%C3%A1%2C%20Cadete%20Travel%20%26%20Services!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20viagens%2C%20hot%C3%A9is%20ou%20transfers."
-          target="_blank"
-          rel="noopener">
+        <a class="btn btn-primary service-button"
+           href="https://wa.me/258823905132?text=Ol%C3%A1%2C%20Cadete%20Travel%20%26%20Services!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20viagens%2C%20hot%C3%A9is%20ou%20transfers."
+           target="_blank"
+           rel="noopener noreferrer">
           💬 Consultar serviços
         </a>
       </div>
 
-      <!-- VISTOS E APOIO DOCUMENTAL -->
       <div class="card">
         <div class="card-icon">🛂</div>
         <h3>Vistos e Apoio Documental</h3>
@@ -794,16 +867,14 @@ footer li { margin-bottom: 8px; }
           sobre os procedimentos para pedidos de visto,
           conforme o destino e o objetivo da viagem.
         </p>
-        <a
-          class="btn btn-primary service-button"
-          href="https://wa.me/258823905132?text=Ol%C3%A1%2C%20Cadete%20Travel%20%26%20Services!%20Gostaria%20de%20solicitar%20apoio%20para%20visto%20ou%20documenta%C3%A7%C3%A3o."
-          target="_blank"
-          rel="noopener">
+        <a class="btn btn-primary service-button"
+           href="https://wa.me/258823905132?text=Ol%C3%A1%2C%20Cadete%20Travel%20%26%20Services!%20Gostaria%20de%20solicitar%20apoio%20para%20visto%20ou%20documenta%C3%A7%C3%A3o."
+           target="_blank"
+           rel="noopener noreferrer">
           💬 Pedir apoio documental
         </a>
       </div>
 
-      <!-- APOIO ADMINISTRATIVO E SERVIÇOS EMPRESARIAIS -->
       <div class="card">
         <div class="card-icon">📊</div>
         <h3>Apoio Administrativo e Serviços Empresariais</h3>
@@ -812,16 +883,14 @@ footer li { margin-bottom: 8px; }
           elaboração de mapas em Excel, controlo de caixa e stock
           e outros serviços de suporte a pequenos negócios.
         </p>
-        <a
-          class="btn btn-primary service-button"
-          href="https://wa.me/258823905132?text=Ol%C3%A1%2C%20Cadete%20Travel%20%26%20Services!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20apoio%20administrativo%20e%20servi%C3%A7os%20empresariais."
-          target="_blank"
-          rel="noopener">
+        <a class="btn btn-primary service-button"
+           href="https://wa.me/258823905132?text=Ol%C3%A1%2C%20Cadete%20Travel%20%26%20Services!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20apoio%20administrativo%20e%20servi%C3%A7os%20empresariais."
+           target="_blank"
+           rel="noopener noreferrer">
           💬 Consultar serviços empresariais
         </a>
       </div>
 
-      <!-- EVENTOS E ALUGUER DE VIATURAS -->
       <div class="card">
         <div class="card-icon">🎉</div>
         <h3>Eventos e Aluguer de Viaturas</h3>
@@ -830,11 +899,10 @@ footer li { margin-bottom: 8px; }
           reuniões e outros eventos, bem como pedidos de orçamento
           para aluguer de viaturas.
         </p>
-        <a
-          class="btn btn-primary service-button"
-          href="https://wa.me/258823905132?text=Ol%C3%A1%2C%20Cadete%20Travel%20%26%20Services!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20eventos%20ou%20aluguer%20de%20viaturas."
-          target="_blank"
-          rel="noopener">
+        <a class="btn btn-primary service-button"
+           href="https://wa.me/258823905132?text=Ol%C3%A1%2C%20Cadete%20Travel%20%26%20Services!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20eventos%20ou%20aluguer%20de%20viaturas."
+           target="_blank"
+           rel="noopener noreferrer">
           💬 Pedir informações
         </a>
       </div>
@@ -844,6 +912,7 @@ footer li { margin-bottom: 8px; }
 </section>
 
 <!-- SOBRE -->
+
 <section class="about">
   <div class="container">
 
@@ -875,6 +944,7 @@ footer li { margin-bottom: 8px; }
 </section>
 
 <!-- DESTINOS -->
+
 <section id="destinos">
   <div class="container">
 
@@ -920,9 +990,11 @@ footer li { margin-bottom: 8px; }
 </section>
 
 <!-- TRANSFERS -->
+
 <section id="transfers">
-  <div class="container"> 
-          <div class="section-title">
+  <div class="container">
+
+    <div class="section-title">
       <h2>Transfers</h2>
       <p>
         Solicite um orçamento para o seu próximo transfer.
@@ -931,7 +1003,6 @@ footer li { margin-bottom: 8px; }
 
     <div class="transfer-list">
 
-      <!-- AEROPORTO → HOTEL -->
       <div class="transfer-item">
         <div>
           <strong>✈️ Aeroporto → Hotel</strong>
@@ -940,16 +1011,14 @@ footer li { margin-bottom: 8px; }
           </div>
         </div>
 
-        <a
-          class="btn btn-primary transfer-button"
-          href="https://wa.me/258823905132?text=Ol%C3%A1%20Cadete%20Travel%20%26%20Services%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20transfer%20do%20Aeroporto%20para%20o%20Hotel."
-          target="_blank"
-          rel="noopener">
+        <a class="btn btn-primary transfer-button"
+           href="https://wa.me/258823905132?text=Ol%C3%A1%20Cadete%20Travel%20%26%20Services%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20transfer%20do%20Aeroporto%20para%20o%20Hotel."
+           target="_blank"
+           rel="noopener noreferrer">
           💬 Solicitar preço
         </a>
       </div>
 
-      <!-- HOTEL → AEROPORTO -->
       <div class="transfer-item">
         <div>
           <strong>🏨 Hotel → Aeroporto</strong>
@@ -958,16 +1027,14 @@ footer li { margin-bottom: 8px; }
           </div>
         </div>
 
-        <a
-          class="btn btn-primary transfer-button"
-          href="https://wa.me/258823905132?text=Ol%C3%A1%20Cadete%20Travel%20%26%20Services%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20transfer%20do%20Hotel%20para%20o%20Aeroporto."
-          target="_blank"
-          rel="noopener">
+        <a class="btn btn-primary transfer-button"
+           href="https://wa.me/258823905132?text=Ol%C3%A1%20Cadete%20Travel%20%26%20Services%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20transfer%20do%20Hotel%20para%20o%20Aeroporto."
+           target="_blank"
+           rel="noopener noreferrer">
           💬 Solicitar preço
         </a>
       </div>
 
-      <!-- TRANSFER EMPRESARIAL -->
       <div class="transfer-item">
         <div>
           <strong>💼 Transfer Empresarial</strong>
@@ -976,16 +1043,14 @@ footer li { margin-bottom: 8px; }
           </div>
         </div>
 
-        <a
-          class="btn btn-primary transfer-button"
-          href="https://wa.me/258823905132?text=Ol%C3%A1%20Cadete%20Travel%20%26%20Services%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20Transfer%20Empresarial."
-          target="_blank"
-          rel="noopener">
+        <a class="btn btn-primary transfer-button"
+           href="https://wa.me/258823905132?text=Ol%C3%A1%20Cadete%20Travel%20%26%20Services%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20Transfer%20Empresarial."
+           target="_blank"
+           rel="noopener noreferrer">
           💬 Solicitar preço
         </a>
       </div>
 
-      <!-- TRANSFER PERSONALIZADO -->
       <div class="transfer-item">
         <div>
           <strong>🚐 Transfer Personalizado</strong>
@@ -994,11 +1059,10 @@ footer li { margin-bottom: 8px; }
           </div>
         </div>
 
-        <a
-          class="btn btn-primary transfer-button"
-          href="https://wa.me/258823905132?text=Ol%C3%A1%20Cadete%20Travel%20%26%20Services%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20Transfer%20Personalizado."
-          target="_blank"
-          rel="noopener">
+        <a class="btn btn-primary transfer-button"
+           href="https://wa.me/258823905132?text=Ol%C3%A1%20Cadete%20Travel%20%26%20Services%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20Transfer%20Personalizado."
+           target="_blank"
+           rel="noopener noreferrer">
           💬 Solicitar preço
         </a>
       </div>
@@ -1008,6 +1072,7 @@ footer li { margin-bottom: 8px; }
 </section>
 
 <!-- CONTACTO -->
+
 <section class="contact" id="contacto">
   <div class="container">
 
@@ -1025,18 +1090,17 @@ footer li { margin-bottom: 8px; }
         <div class="contact-box">
           <h3>📞 Telefone</h3>
           <p>
-            +258 845 058 349<br>
-            +258 875 058 349
+            <a href="tel:+258845058349">+258 845 058 349</a><br>
+            <a href="tel:+258875058349">+258 875 058 349</a>
           </p>
         </div>
 
         <div class="contact-box">
           <h3>💬 WhatsApp</h3>
           <p>
-            <a
-              href="https://wa.me/258823905132?text=Ol%C3%A1%20Cadete%20Travel%20%26%20Services%2C%20gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os."
-              target="_blank"
-              rel="noopener">
+            <a href="https://wa.me/258823905132?text=Ol%C3%A1%20Cadete%20Travel%20%26%20Services%2C%20gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os."
+               target="_blank"
+               rel="noopener noreferrer">
               +258 823 905 132
             </a>
           </p>
@@ -1047,7 +1111,7 @@ footer li { margin-bottom: 8px; }
           <p>
             <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=cadetetours@gmail.com"
                target="_blank"
-               rel="noopener">
+               rel="noopener noreferrer">
               cadetetours@gmail.com
             </a>
           </p>
@@ -1058,7 +1122,7 @@ footer li { margin-bottom: 8px; }
           <p>
             <a href="https://www.facebook.com/profile.php?id=61595249157349"
                target="_blank"
-               rel="noopener">
+               rel="noopener noreferrer">
               Visite a nossa página
             </a>
           </p>
@@ -1069,7 +1133,7 @@ footer li { margin-bottom: 8px; }
           <p>
             <a href="https://www.instagram.com/cadetetravelandtours/"
                target="_blank"
-               rel="noopener">
+               rel="noopener noreferrer">
               Visite o nosso Instagram
             </a>
           </p>
@@ -1080,7 +1144,8 @@ footer li { margin-bottom: 8px; }
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- RODAPÉ -->
+
 <footer>
   <div class="container">
 
@@ -1097,12 +1162,13 @@ footer li { margin-bottom: 8px; }
       <div>
         <h3>Serviços</h3>
         <ul>
+          <li>Passagens aéreas</li>
           <li>Reservas de Hotéis</li>
-          <li>Transfers</li>
-          <li>Tours</li>
+          <li>Transfers e Tours</li>
           <li>Aluguer de Viaturas</li>
-          <li>Ornamentação de Eventos</li>
+          <li>Eventos</li>
           <li>Apoio para Vistos</li>
+          <li>Apoio Administrativo</li>
         </ul>
       </div>
 
@@ -1112,13 +1178,13 @@ footer li { margin-bottom: 8px; }
           Segunda – Sexta<br>
           08:00 – 17:00
         </p>
+
         <p>
           Sábado<br>
           08:00 – 13:00
         </p>
-        <p>
-          Domingo: Encerrado
-        </p>
+
+        <p>Domingo: Encerrado</p>
       </div>
 
     </div>
@@ -1131,30 +1197,27 @@ footer li { margin-bottom: 8px; }
   </div>
 </footer>
 
-<!-- WHATSAPP FLUTUANTE -->
-<a
-  class="whatsapp-float"
-  href="https://wa.me/258823905132?text=Ola%2C%20Cadete%20Travel%20%26%20Services!%20Gostaria%20de%20fazer%20uma%20reserva%20e%20obter%20informacoes%20sobre%20os%20vossos%20servicos."
-  target="_blank"
-  rel="noopener"
-  aria-label="Falar com a Cadete Travel & Services pelo WhatsApp">
+<!-- BOTÕES FLUTUANTES -->
+
+<a class="whatsapp-float"
+   href="https://wa.me/258823905132?text=Ola%2C%20Cadete%20Travel%20%26%20Services!%20Gostaria%20de%20fazer%20uma%20reserva%20e%20obter%20informacoes%20sobre%20os%20vossos%20servicos."
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Falar com a Cadete Travel & Services pelo WhatsApp">
   💬
 </a>
 
-<!-- EMAIL FLUTUANTE -->
-<a
-  class="email-float"
-  href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=cadetetours@gmail.com"
-  target="_blank"
-  rel="noopener"
-  aria-label="Enviar email para Cadete Travel & Services"
-  title="Enviar Email">
+<a class="email-float"
+   href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=cadetetours@gmail.com"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Enviar email para Cadete Travel & Services"
+   title="Enviar Email">
   ✉️
 </a>
 
 <script>
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
