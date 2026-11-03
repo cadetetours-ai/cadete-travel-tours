@@ -187,11 +187,10 @@
     .hero-image {
   display: block;
   width: 100%;
-  max-width: 1250px;
-  height: auto;
-  object-fit: contain;
-  object-position: center;
-  margin: 0 auto;
+  height: 520px;
+  object-fit: cover;
+  object-position: center top;
+  margin: 0;
 }
 
     .hero-overlay {
@@ -530,28 +529,33 @@
       }
     }
 
-    /* TELEMÓVEL */
+ /* TELEMÓVEL */
 
-    @media (max-width: 850px) {
-      .header-content {
-        flex-direction: column;
-        padding: 15px 0;
-        gap: 12px;
-      }
+@media (max-width: 850px) {
+  .header-content {
+    flex-direction: column;
+    padding: 15px 0;
+    gap: 12px;
+  }
 
-      nav {
-        justify-content: center;
-      }
+  .hero-image {
+    height: auto;
+    object-fit: contain;
+  }
 
-      .hero-overlay {
-        padding: 15px 10px;
-        background: linear-gradient(
-          to top,
-          rgba(0,0,0,.75),
-          rgba(0,0,0,.15) 60%,
-          transparent
-        );
-      }
+  nav {
+    justify-content: center;
+  }
+
+  .hero-overlay {
+    padding: 15px 10px;
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,.75),
+      rgba(0,0,0,.15) 60%,
+      transparent
+    );
+  }
 
       .buttons {
         flex-direction: column;
