@@ -702,7 +702,7 @@
       }
     }
 
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', async function(event) {
       event.preventDefault();
 
       if (!form.reportValidity()) return;
@@ -789,10 +789,42 @@
       );
 
       const message = lines.join('\n');
-      const url =
-        'https://wa.me/258823905132?text=' + encodeURIComponent(message);
 
-      window.location.href = url;
+      const whatsappUrl =
+        'https://wa.me/258823905132?text=' +
+        encodeURIComponent(message);
+
+      try {
+        const response = await fetch(
+          'https://formsubmit.app/f/48ry443sg4',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              name: valueOf('name'),
+              email: valueOf('email'),
+              _subject: 'Novo pedido — Cadete Travel & Services',
+              message: message
+            })
+          }
+        );
+
+        const result = await response.json();
+
+        if (!response.ok || !result.ok) {
+          throw new Error('Falha no envio por email.');
+        }
+
+        alert('Pedido enviado para a Cadete! Agora confirme também o envio pelo WhatsApp.');
+
+      } catch (error) {
+        alert('Não foi possível enviar a cópia por email. O WhatsApp será aberto para continuar o pedido.');
+      }
+
+      window.location.href = whatsappUrl;
     });
 
     updateServiceFields();
