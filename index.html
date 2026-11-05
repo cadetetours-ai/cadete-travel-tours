@@ -320,22 +320,49 @@
       padding: 10px 18px;
     }
 
-    /* SOBRE */
+   /* SOBRE */
 
-    .about {
-      background: #f7f7f7;
-    }
+.about {
+  background: #f7f7f7;
+}
 
-    .about-content {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: left;
+}
 
-    .about-content p {
-      margin-bottom: 15px;
-      color: #555;
-    }
+.about-text {
+  flex: 1;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  display: block;
+  margin: auto;
+  box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+
+.about-content p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+@media (max-width: 850px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
     /* DESTINOS */
 
@@ -919,35 +946,49 @@
   </div>
 </section>
 
-<!-- SOBRE -->
+/* SOBRE */
 
-<section class="about">
-  <div class="container">
+.about {
+  background: #f7f7f7;
+}
 
-    <div class="section-title">
-      <h2>Sobre a Cadete Travel &amp; Services</h2>
-    </div>
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: left;
+}
 
-    <div class="about-content">
-      <p>
-        A Cadete Travel &amp; Services é uma agência dedicada a tornar
-        as suas viagens mais simples, confortáveis e organizadas.
-      </p>
+.about-text {
+  flex: 1;
+}
 
-      <div class="about-image">
-  <img src="banner-cadete.png" alt="Cadete Travel & Services">
-</div>
+.about-image {
+  flex: 1;
+}
 
-      <p>
-        Trabalhamos com foco no atendimento personalizado,
-        procurando compreender as necessidades de cada cliente
-        e proporcionar soluções práticas para viagens de lazer,
-        negócios, eventos e outras ocasiões especiais.
-      </p>
-    </div>
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  display: block;
+  margin: auto;
+  box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
 
-  </div>
-</section>
+.about-content p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+@media (max-width: 850px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
 <!-- DESTINOS -->
 
