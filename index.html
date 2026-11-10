@@ -327,7 +327,36 @@
       background: var(--gold-light);
       transform: translateY(-1px);
     }
+    /* BOTÃO DE ORÇAMENTO ABAIXO DO BANNER */
+.hero-cta {
+  background: var(--surface-soft);
+  padding: 25px 15px;
+  text-align: center;
+}
 
+.hero-cta .btn {
+  display: inline-block;
+  min-width: 280px;
+  padding: 16px 28px;
+  font-size: 17px;
+  font-weight: 800;
+  border-radius: 8px;
+  border: 2px solid var(--gold);
+  box-shadow: 0 5px 16px rgba(16, 43, 78, .15);
+}
+
+.hero-cta .btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 550px) {
+  .hero-cta .btn {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    font-size: 16px;
+  }
+}
     /* SECÇÕES */
     section.content-section {
       padding: 70px 0;
@@ -959,6 +988,17 @@
       class="hero-image"
       fetchpriority="high">
   </section>
+
+  <!-- BOTÃO DE ORÇAMENTO -->
+  <section class="hero-cta">
+    <a class="btn btn-primary"
+       href="https://wa.me/258823905132?text=Ola%2C%20Cadete%20Travel%20%26%20Services!%20Gostaria%20de%20solicitar%20um%20orcamento%20gratuito."
+       target="_blank"
+       rel="noopener noreferrer">
+      📲 Pedir Orçamento Gratuito
+    </a>
+  </section>
+
   <!-- FAIXA DE CONFIANÇA -->
   <section class="trust-bar">
     <div class="container">
