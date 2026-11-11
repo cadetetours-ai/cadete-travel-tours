@@ -69,6 +69,26 @@
   background: #116b3c;
 }
 
+/* BOTÃO DE ENVIO POR E-MAIL */
+.status-email {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 12px;
+  padding: 15px 20px;
+  background: #1769aa;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.status-email:hover {
+  background: #102b4e;
+}
+
 .submission-status.warning {
   background: #fff9eb;
   border-color: #ead9a4;
@@ -684,45 +704,46 @@
           </div>
         </fieldset>
 
-        <button class="btn" type="submit">
-          Enviar pedido pelo WhatsApp
-        </button>
+       <button class="btn" type="submit">
+         Preparar pedido
+       </button>
 
         <div class="notice">
-          O WhatsApp abrirá com a mensagem preenchida. Reveja os dados
-          e toque em <strong>Enviar</strong> no WhatsApp para concluir
-          o pedido. A reserva ou serviço só será confirmado após
-          validação pela agência.
-        </div>
+          Depois de preparar o pedido, escolha entre enviá-lo
+          por e-mail ou continuar pelo WhatsApp. A reserva ou
+          serviço só será confirmado após validação pela agência.
+       </div>
       </form>
         <!-- PAINEL DE CONFIRMAÇÃO DO PEDIDO -->
         <div id="submissionStatus"
-             class="submission-status"
-             role="status"
-             aria-live="polite"
-             hidden>
+     class="submission-status"
+     role="status"
+     aria-live="polite"
+     hidden>
 
-          <div class="success-icon" id="statusIcon">✓</div>
+  <div class="success-icon" id="statusIcon">✓</div>
 
-          <h2 id="statusTitle">
-            Pedido enviado com sucesso!
-          </h2>
+  <h2 id="statusTitle">Pedido preparado!</h2>
 
-          <p id="statusMessage">
-            Obrigado por contactar a Cadete Travel &amp; Services.
-            Recebemos o seu pedido e entraremos em contacto
-            através dos dados fornecidos.
-          </p>
+  <p id="statusMessage">
+    Escolha como pretende enviar o seu pedido.
+  </p>
 
-          <a id="whatsappContinue"
-             class="status-whatsapp"
-             href="#"
-             target="_blank"
-             rel="noopener">
-            📲 Continuar para o WhatsApp
-          </a>
+  <a id="emailContinue"
+     class="status-email"
+     href="#">
+    📧 Enviar pedido por e-mail
+  </a>
 
-        </div>
+  <a id="whatsappContinue"
+     class="status-whatsapp"
+     href="#"
+     target="_blank"
+     rel="noopener">
+    📲 Continuar pelo WhatsApp
+  </a>
+
+</div>
     </section>
   </main>
 
@@ -789,7 +810,7 @@
       }
     }
 
-    form.addEventListener('submit', async function(event) {
+    form.addEventListener('submit', function(event) {
   event.preventDefault();
 
   if (!form.reportValidity()) return;
@@ -881,71 +902,45 @@
     'https://wa.me/258823905132?text=' +
     encodeURIComponent(message);
 
+  const emailSubject =
+    'Pedido — Cadete Travel & Services';
+
+  const emailUrl =
+    'mailto:cadetetours@gmail.com?subject=' +
+    encodeURIComponent(emailSubject) +
+    '&body=' +
+    encodeURIComponent(message);
+
   const status = document.getElementById('submissionStatus');
   const statusIcon = document.getElementById('statusIcon');
   const statusTitle = document.getElementById('statusTitle');
   const statusMessage = document.getElementById('statusMessage');
+
+  const emailContinue = document.getElementById('emailContinue');
   const whatsappContinue = document.getElementById('whatsappContinue');
+
   const submitButton = form.querySelector('button[type="submit"]');
 
+  // Preparar as duas opções de envio
+  emailContinue.href = emailUrl;
   whatsappContinue.href = whatsappUrl;
 
-  submitButton.disabled = true;
-  submitButton.textContent = 'A enviar pedido...';
+    // Apresentar a confirmação
+  statusIcon.textContent = '✓';
+  statusTitle.textContent = 'Pedido preparado!';
+  statusMessage.textContent =
+    'Escolha uma das opções abaixo para enviar o seu pedido.';
 
-  try {
-    const response = await fetch(
-      'https://formsubmit.app/f/48ry443sg4',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          name: valueOf('name'),
-          email: valueOf('email'),
-          _subject: 'Novo pedido — Cadete Travel & Services',
-          message: message
-        })
-      }
-    );
+  status.hidden = false;
 
-    const result = await response.json();
+  submitButton.disabled = false;
+  submitButton.textContent = 'Preparar pedido';
 
-    if (!response.ok || !result.ok) {
-      throw new Error('Falha no envio por email.');
-    }
+  status.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
 
-    status.className = 'submission-status';
-    statusIcon.textContent = '✓';
-    statusTitle.textContent = 'Pedido enviado com sucesso!';
-    statusMessage.textContent =
-      'Obrigado por contactar a Cadete Travel & Services. ' +
-      'Recebemos o seu pedido por e-mail e entraremos em contacto ' +
-      'através dos dados fornecidos.';
-
-  } catch (error) {
-
-    status.className = 'submission-status warning';
-    statusIcon.textContent = '!';
-    statusTitle.textContent = 'Não foi possível confirmar o envio por e-mail.';
-    statusMessage.textContent =
-      'Pode continuar através do WhatsApp para enviar o seu pedido. ' +
-      'Pedimos desculpa pelo inconveniente.';
-
- } finally {
-
-    status.hidden = false;
-
-    submitButton.disabled = false;
-    submitButton.textContent = 'Enviar pedido pelo WhatsApp';
-
-    status.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center'
-    });
-  }
 });
 
 updateServiceFields();
