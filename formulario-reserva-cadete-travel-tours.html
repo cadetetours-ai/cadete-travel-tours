@@ -730,10 +730,12 @@
   </p>
 
   <a id="emailContinue"
-     class="status-email"
-     href="#">
-    📧 Enviar pedido por e-mail
-  </a>
+   class="status-email"
+   href="#"
+   target="_blank"
+   rel="noopener">
+  📧 Enviar pedido por e-mail
+</a>
 
   <a id="whatsappContinue"
      class="status-whatsapp"
@@ -906,10 +908,12 @@
     'Pedido — Cadete Travel & Services';
 
   const emailUrl =
-    'mailto:cadetetours@gmail.com?subject=' +
-    encodeURIComponent(emailSubject) +
-    '&body=' +
-    encodeURIComponent(message);
+  'https://mail.google.com/mail/?view=cm&fs=1&to=' +
+  encodeURIComponent('cadetetours@gmail.com') +
+  '&su=' +
+  encodeURIComponent(emailSubject) +
+  '&body=' +
+  encodeURIComponent(message);
 
   const status = document.getElementById('submissionStatus');
   const statusIcon = document.getElementById('statusIcon');
