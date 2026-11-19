@@ -288,35 +288,37 @@
     .hero-cta .btn:hover { transform: translateY(-3px); }
 
     /* FAIXA DE CONFIANÇA */
-    .trust-bar {
-      background: var(--navy);
-      border-top: 3px solid var(--gold);
-      border-bottom: 3px solid var(--gold);
-      padding: 25px 15px;
-    }
+.trust-bar {
+  background: var(--navy);
+  border-top: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
+  padding: 10px 8px;
+}
 
-    .trust-bar .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px 24px;
-      text-align: center;
-    }
+.trust-bar .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
 
-    .trust-item {
-      color: #fff;
-      font-size: 18px;
-      font-weight: 600;
-      padding: 8px 5px;
-      line-height: 1.5;
-    }
+.trust-item {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 2px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
 
-    .trust-item::first-letter {
-      color: var(--gold-light);
-      font-weight: 800;
-    }
-
+.trust-item::first-letter {
+  color: var(--gold-light);
+  font-weight: 800;
+}
     /* SECÇÕES */
     section.content-section { padding: 70px 0; }
 
