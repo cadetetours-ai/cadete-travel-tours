@@ -234,10 +234,8 @@
     nav a:hover { color: var(--gold); }
 
     /* BANNER PRINCIPAL */
-
 .hero {
   width: 100%;
-  height: 470px;
   overflow: hidden;
   background: #063767;
 }
@@ -245,9 +243,9 @@
 .hero-image {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
 }
 
     /* BOTÕES */
@@ -292,7 +290,7 @@
   border-top: 3px solid var(--gold);
   border-bottom: 3px solid var(--gold);
   padding: 10px 8px;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 0;
 }
 
@@ -609,10 +607,9 @@
 
 /* TELEMÓVEIS */
 @media (max-width: 768px) {
-
   .hero {
-    height: 260px;
-  }
+  height: auto;
+}
 
   .trust-bar .container {
     grid-template-columns: repeat(2, 1fr);
