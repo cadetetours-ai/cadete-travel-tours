@@ -237,6 +237,7 @@
 
 .hero {
   width: 100%;
+  height: 470px;
   overflow: hidden;
   background: #063767;
 }
@@ -244,7 +245,9 @@
 .hero-image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
     /* BOTÕES */
@@ -602,26 +605,34 @@
       #servicos { padding-top: 40px; }
     }
 
-    /* TELEMÓVEIS */
-    @media (max-width: 768px) {
-       .trust-bar .container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-      }
+/* TELEMÓVEIS */
+@media (max-width: 768px) {
 
-      .trust-item { font-size: 13px; padding: 6px 2px; }
-    }
+  .hero {
+    height: 260px;
+  }
 
-    @media (max-width: 550px) {
-      html { scroll-padding-top: 255px; }
-      .container { width: 92%; }
+  .trust-bar .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 
-      .header-content {
-        min-height: auto;
-        padding: 12px 0;
-        gap: 10px;
-      }
+  .trust-item {
+    font-size: 13px;
+    padding: 6px 2px;
+  }
 
+}
+
+@media (max-width: 550px) {
+  html { scroll-padding-top: 255px; }
+  .container { width: 92%; }
+
+  .header-content {
+    min-height: auto;
+    padding: 12px 0;
+    gap: 10px;
+  }
       .logo { font-size: 20px; text-align: center; }
       .logo span { font-size: 15px; }
       .header-actions { width: 100%; }
