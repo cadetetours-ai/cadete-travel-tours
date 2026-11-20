@@ -725,18 +725,24 @@
         animation-iteration-count: 1 !important;
       }
     }
-    /* CABEÇALHO SEMPRE FIXO NO TELEMÓVEL */
-@media (max-width: 768px) {
+    /* CABEÇALHO FIXO NO TELEMÓVEL */
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow-x: clip;
+  }
+
   header {
-    position: fixed;
-    top: 0;
+    position: fixed !important;
+    top: 0 !important;
     left: 0;
+    right: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 99999;
+    transform: none !important;
   }
 
   body {
-    padding-top: 130px;
+    padding-top: 180px;
   }
 }
   </style>
