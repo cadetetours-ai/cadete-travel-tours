@@ -725,6 +725,15 @@
         animation-iteration-count: 1 !important;
       }
     }
+    /* CABEÇALHO FIXO NO TELEMÓVEL */
+@media (max-width: 768px) {
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+}
   </style>
 </head>
 
